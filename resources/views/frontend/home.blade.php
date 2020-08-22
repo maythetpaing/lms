@@ -1,7 +1,7 @@
 @extends('frontendtemplate')
 
 @section('content')
-<div class="col-lg-9">
+<div class="col-lg-9 my-5">
 
 	<div id="carouselExampleIndicators" class="carousel slide my-4" data-ride="carousel">
 		<ol class="carousel-indicators">
@@ -11,13 +11,16 @@
 		</ol>
 		<div class="carousel-inner" role="listbox">
 			<div class="carousel-item active">
-				<img class="d-block img-fluid" src="#" alt="First slide">
+				{{-- <img class="d-block img-fluid" src="#" alt="First slide"> --}}
+				<h1 class="text-center">Hello</h1>
 			</div>
 			<div class="carousel-item">
-				<img class="d-block img-fluid" src="#" alt="Second slide">
+				{{-- <img class="d-block img-fluid" src="#" alt="Second slide"> --}}
+				<h1 class="text-center">Wellcome</h1>
 			</div>
 			<div class="carousel-item">
-				<img class="d-block img-fluid" src="#" alt="Third slide">
+				{{-- <img class="d-block img-fluid" src="#" alt="Third slide"> --}}
+				<h2 class="text-center">UCS Library</h2>
 			</div>
 		</div>
 		<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
