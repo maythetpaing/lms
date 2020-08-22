@@ -24,3 +24,6 @@ Route::get('/','FrontendController@home')->name('homepage');
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('dashboard','BackendController@dashboard')->name('dashboard');
+
+
+Route::resource('authors','AuthorController');
