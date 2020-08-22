@@ -38,23 +38,23 @@ class LoginController extends Controller
         $this->middleware('guest')->except('logout');
     }
 
-    protected function authenticated(Request $request,$user){
-        $roles=$user->getRoleNames();
-        switch ($roles[0]) {
-            case 'admin':
-                # code...
-            return redirect('dashboard');
-                break;
-            case 'customer':
-                # code...
-            return redirect('/');
-                break;
+    // protected function authenticated(Request $request,$user){
+    //     $roles=$user->getRoleNames();
+    //     switch ($roles[0]) {
+    //         case 'admin':
+    //             # code...
+    //         return redirect('dashboard');
+    //             break;
+    //         case 'customer':
+    //             # code...
+    //         return redirect('/');
+    //             break;
             
-            default:
-            return redirect(
-                '/');
-                # code...
-                break;
-        }
-    }
+    //         default:
+    //         return redirect(
+    //             '/');
+    //             # code...
+    //             break;
+    //     }
+    // }
 }
