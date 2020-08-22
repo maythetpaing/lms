@@ -13,13 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-<<<<<<< HEAD
+
 Route::get('/','FrontendController@home')->name('homepage');
-=======
+
 // Route::get('/', function () {
 //     return view('welcome');
 // });
->>>>>>> b420947000e518f3408f065e422ef79d850c9d25
 
 // Auth::routes();
 

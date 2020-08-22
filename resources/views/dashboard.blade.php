@@ -1,6 +1,6 @@
 @extends('backendtemplate')
 @section('content')
-<<<<<<< HEAD
+{{-- <<<<<<< HEAD --}}
 <!-- Begin Page Content -->
 <div class="container-fluid">
 
@@ -303,7 +303,7 @@
 </div>
 <!-- End of Main Content -->
 
-=======
+
 
 <!-- Begin Page Content -->
 <div class="container-fluid">
@@ -609,6 +609,6 @@
 <!-- End of Main Content -->
 
 <!-- Footer -->
->>>>>>> b420947000e518f3408f065e422ef79d850c9d25
+
 
 @endsection
