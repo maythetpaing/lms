@@ -10,6 +10,7 @@
   <meta name="author" content="">
 
   <title>LMS Dashboard</title>
+  <link rel="icon" href="{{asset('backend/img/logo.png')}}" class="w-100 h-100">
 
   <!-- Custom fonts for this template-->
   <link href="{{asset('backend/vendor/fontawesome-free/css/all.min.css')}}" rel="stylesheet" type="text/css">
@@ -95,12 +96,12 @@
           </li>
 
           <!-- Nav Item - Tables -->
-          <li class="nav-item">
-            <a class="nav-link" href="#">
+          <{{-- li class="nav-item">
+            <a class="nav-link" href="#"> --}}
               {{-- <i class="fas fa-fw fa-table"></i> --}}
-              <i class="fas fa-fw fa-folder"></i>
+            {{--   <i class="fas fa-fw fa-folder"></i>
               <span>Subcategory</span></a>
-            </li>
+            </li> --}}
 
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
@@ -307,7 +308,7 @@
             </nav>
             <!-- End of Topbar -->
 
-            @yield('content');
+            @yield('content')
 
             <!-- Footer -->
             <footer class="sticky-footer bg-white">

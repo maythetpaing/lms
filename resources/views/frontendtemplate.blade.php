@@ -10,6 +10,7 @@
   <meta name="csrf-token" content="{{ csrf_token() }}">
 
   <title>Library Management System</title>
+  <link rel="icon" href="{{asset('backend/img/logo.png')}}" class="w-100 h-100">
 
   <!-- Bootstrap core CSS -->
   <link href="{{asset('frontend/vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
@@ -22,20 +23,23 @@
 <body>
 
   <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top">
     <div class="container">
-      <a class="navbar-brand" href="#">LMS</a>
+      <a class="navbar-brand" href="#">
+        <img src="{{asset('backend/img/logo.png')}}" class="img-fluid logo">
+        <h6 class="text-white">UCS Library</h6>
+      </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="#">Home
+            <a class="nav-link text-white" href="#">Home
               <span class="sr-only">(current)</span>
             </a>
           </li>
-          {{-- <li class="nav-item">
+          <li class="nav-item">
             <a class="nav-link" href="#">About</a>
           </li>
           <li class="nav-item">
@@ -43,7 +47,7 @@
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Contact</a>
-          </li> --}}
+          </li>
           <li class="nav-item">
             <a class="nav-link" href="#" >Cart<span id="item_count"></span></a>
           </li>
@@ -102,7 +106,7 @@
 <!-- /.container -->
 
 <!-- Footer -->
-<footer class="py-5 bg-dark">
+<footer class="py-5">
   <div class="container">
     <p class="m-0 text-center text-white">Copyright &copy; Your Website 2020</p>
   </div>
