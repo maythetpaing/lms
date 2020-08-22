@@ -4,7 +4,7 @@
 
 <div class="container-fluid">
 	<h2 class="d-inline-block">Book List</h2>
-	<a href="{{route('books.create')}}" class="btn btn-success float-right">Add Book</a>
+	<a href="{{route('books.create')}}" class="btn btn-success float-right">+ Add Book</a>
 	<table class="table table-bordered">
 		<thead>
 			<tr>
@@ -41,7 +41,9 @@
 				<td>{{$book->noc}}</td>
 				<td>{{$book->edition}}</td>
 				<td>
-					<a href="{{route('books.edit',$book->id)}}" class="btn btn-warning">Edit</a>
+					<a href="{{route('books.edit',$book->id)}}" class="btn btn-warning">
+					<i class="far fa-edit"></i>
+					Edit</a>
 					<form method="post" action="{{route('books.destroy',$book->id)}}" class="d-inline-block">
 						@csrf
 						@method('DELETE')

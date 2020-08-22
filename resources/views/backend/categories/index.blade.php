@@ -2,7 +2,7 @@
 @section('content')
 <div class="container-fluid">
 	<h2 class="d-inline-block">Category List(Table)</h2>
-	<a href="{{route('categories.create')}}" class="btn btn-success float-right">Add Category</a>
+	<a href="{{route('categories.create')}}" class="btn btn-success float-right">+ Add Category</a>
 	<table class="table table-bordered">
 		<thead>
 			<tr>
@@ -21,7 +21,9 @@
 				
 				<td>
 				
-					<a href="{{route('categories.edit',$category->id)}}" class="btn btn-warning">Edit</a>
+					<a href="{{route('categories.edit',$category->id)}}" class="btn btn-warning">
+					<i class="far fa-edit"></i>
+					Edit</a>
 					<form method="post" action="{{route('categories.destroy',$category->id)}}" onsubmit="return confirm('Are you sure?')" class="d-inline-block">
 						@csrf
 						@method('DELETE')

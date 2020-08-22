@@ -40,17 +40,17 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
+            <a class="nav-link" href="#">Books</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Services</a>
+            <a class="nav-link" href="#">About</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Contact</a>
           </li>
-          <li class="nav-item">
+         {{--  <li class="nav-item">
             <a class="nav-link" href="#" >Cart<span id="item_count"></span></a>
-          </li>
+          </li> --}}
           <li class="nav-item">
             {{-- <a class="nav-link" href="{{route('profile')}}">Mg Mg</a> --}}
             {{-- @guest
@@ -94,24 +94,35 @@
 
   <div class="row">
     @yield('sidebar')
-<!-- /.col-lg-3 -->
+    <!-- /.col-lg-3 -->
 
-@yield('content')
-<!-- /.col-lg-9 -->
+    @yield('content')
+    <!-- /.col-lg-9 -->
 
-</div>
-<!-- /.row -->
+  </div>
+  <!-- /.row -->
 
 </div>
 <!-- /.container -->
 
 <!-- Footer -->
-<footer class="py-5">
+{{-- <footer class="py-2">
+  <iframe src="https://calendar.google.com/calendar/embed?src=en.mm%23holiday%40group.v.calendar.google.com&ctz=Asia%2FYangon" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
   <div class="container">
     <p class="m-0 text-center text-white">Copyright &copy; Your Website 2020</p>
-  </div>
+  </div> --}}
   <!-- /.container -->
-</footer>
+{{-- </footer> --}}
+
+ {{-- <iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=Asia%2FYangon" style="border:solid 1px #777" width="200" height="200" frameborder="0" scrolling="no"></iframe> --}}
+
+<!-- footer -->
+    <footer class="footer">
+      <div class="container text-light text-center text-white text-monospace">
+         <div class="container">
+        <p class="footertext m-0">Copyright &copy; All Right Result | Powered By Web-Design-2020 </p>
+      </div>
+    </footer>
 
 <!-- Bootstrap core JavaScript -->
 <script src="{{asset('frontend/vendor/jquery/jquery.min.js')}}"></script>

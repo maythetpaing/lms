@@ -17,7 +17,6 @@ class BookController extends Controller
     {
         $books=Book::all();
         // dd($items);
-
         return view('backend.books.index',
         compact('books'));
     }
@@ -30,7 +29,7 @@ class BookController extends Controller
     public function create()
     {
         $authors=Author::all();
-        // to retrieve data from subcategory
+        // to retrieve data from category
         $categories=Category::all();
         return view('backend.books.create',compact('authors','categories'));
     }

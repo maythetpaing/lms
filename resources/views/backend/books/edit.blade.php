@@ -26,7 +26,7 @@
 			<div class="form-group">
 				<label>Photo:</label>
 				<input type="file" name="photo" class="form-control-file">
-				<img src="{{asset($book->photo)}}">
+				<img src="{{asset($book->photo)}}" class="img-fluid w-25 my-2">
 				<input type="hidden" name="oldphoto" value="{{$book->photo}}">
 			</div>
 			<div class="form-group">
