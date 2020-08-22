@@ -26,7 +26,7 @@ class AuthorController extends Controller
      */
     public function create()
     {
-        // return view('backend.authors.create');
+        return view('backend.authors.create');
     }
 
     /**
@@ -37,7 +37,25 @@ class AuthorController extends Controller
      */
     public function store(Request $request)
     {
-        //
+         $request->validate([
+            
+            'name'=>'required',
+           
+            
+
+
+        ]);
+        
+        //data insert
+        $author=new Author;
+         // $item->table-column=$request->form input type name;
+        
+        $author->name=$request->name;
+        
+        
+        $author->save();
+        //redirect
+        return redirect()->route('authors.index');
     }
 
     /**
@@ -48,7 +66,7 @@ class AuthorController extends Controller
      */
     public function show($id)
     {
-        //
+        // return view('backend.authors.show');
     }
 
     /**
@@ -59,7 +77,8 @@ class AuthorController extends Controller
      */
     public function edit($id)
     {
-        //
+         $author =Author::find($id);
+        return view('backend.authors.edit',compact('author'));
     }
 
     /**
@@ -71,7 +90,22 @@ class AuthorController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+         $request->validate([
+            
+            'name'=>'required',
+
+        ]);
+        //if include file,upload
+         
+        //data insert
+        $author=Author::find($id);
+         // $item->table-column=$request->form input type name;author
+        
+        $author->name=$request->name;
+       
+        $author->save();
+        //redirect
+        return redirect()->route('authors.index');
     }
 
     /**
@@ -82,6 +116,9 @@ class AuthorController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $author=Author::find($id);
+        $author->delete();
+        //redirect
+        return redirect()->route('authors.index');
     }
 }
