@@ -29,4 +29,6 @@ Route::get('dashboard','BackendController@dashboard')->name('dashboard');
 Route::resource('authors','AuthorController');
 Route::resource('categories','CategoryController');
 Route::resource('books','BookController');
+Route::resource('departments','DepartmentController');
+Route::resource('years','YearController');
 
