@@ -26,21 +26,19 @@ Route::get('profile','FrontendController@profile')->name('profile');
 
 Route::get('register','FrontendController@register')->name('register');
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+Route::get('/', function () {
+    return view('welcome');
+});
 
 // Backend---------
 Route::middleware('role:admin')->group(function () {
+Route::get('dashboard','BackendController@dashboard')->name('dashboard');
 Route::resource('authors','AuthorController');
 Route::resource('categories','CategoryController');
 Route::resource('books','BookController');
 Route::resource('departments','DepartmentController');
 Route::resource('years','YearController');
 });	
-
-Route::get('dashboard','BackendController@dashboard')->name('dashboard');
-
 
 
 Auth::routes();

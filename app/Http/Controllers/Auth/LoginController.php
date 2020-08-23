@@ -50,7 +50,6 @@ class LoginController extends Controller
                 # code...
             return redirect('/');
                 break;
-            
             default:
             return redirect(
                 '/');
