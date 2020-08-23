@@ -43,7 +43,7 @@
       <!-- Nav Item - Dashboard -->
       <li class="nav-item active">
         <a class="nav-link" href="{{route('dashboard')}}">
-          <i class="fas fa-fw fa-tachometer-alt"></i>
+          <i class="far fa-clipboard"></i>
           <span>Library Report</span></a>
         </li>
 

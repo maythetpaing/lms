@@ -2,7 +2,7 @@
 @section('content')
 <div class="container-fluid">
 	<h2 class="d-inline-block">Author List(Table)</h2>
-	<a href="{{route('authors.create')}}" class="btn btn-success float-right">Add Author</a>
+	<a href="{{route('authors.create')}}" class="btn btn-success float-right">+ Add Author</a>
 	<table class="table table-bordered">
 		<thead>
 			<tr>
@@ -21,7 +21,9 @@
 				
 				<td>
 				
-					<a href="{{route('authors.edit',$author->id)}}" class="btn btn-warning">Edit</a>
+					<a href="{{route('authors.edit',$author->id)}}" class="btn btn-warning">
+					<i class="far fa-edit"></i>
+					Edit</a>
 					<form method="post" action="{{route('authors.destroy',$author->id)}}" onsubmit="return confirm('Are you sure?')" class="d-inline-block">
 						@csrf
 						@method('DELETE')
