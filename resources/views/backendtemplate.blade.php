@@ -57,7 +57,7 @@
 
         <!-- Nav Item - Pages Collapse Menu -->
         <li class="nav-item">
-          <a class="nav-link collapsed" href="#" aria-expanded="true" aria-controls="collapseTwo">
+          <a class="nav-link collapsed" href="{{route('books.index')}}" aria-expanded="true" aria-controls="collapseTwo">
             <i class="fas fa-book"></i>
             <span>Books</span>
           </a>
@@ -81,7 +81,7 @@
 
         <!-- Nav Item - Pages Collapse Menu -->
         <li class="nav-item">
-          <a class="nav-link collapsed" href="#" aria-expanded="true" aria-controls="collapsePages">
+          <a class="nav-link collapsed" href="{{route('authors.index')}}" aria-expanded="true" aria-controls="collapsePages">
            <i class="fas fa-user-friends"></i>
             <span>Author</span>
           </a>
@@ -89,7 +89,7 @@
 
         <!-- Nav Item - Charts -->
         <li class="nav-item">
-          <a class="nav-link" href="#">
+          <a class="nav-link" href="{{route('categories.index')}}">
             {{-- <i class="fas fa-fw fa-chart-area"></i> --}}
             <i class="fas fa-fw fa-folder"></i>
             <span>Category</span></a>

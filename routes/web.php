@@ -31,14 +31,14 @@ Route::get('register','FrontendController@register')->name('register');
 // });
 
 // Backend---------
-Route::middleware('role:admin')->group(function () {
+// Route::middleware('role:admin')->group(function () {
 Route::get('dashboard','BackendController@dashboard')->name('dashboard');
 Route::resource('authors','AuthorController');
 Route::resource('categories','CategoryController');
 Route::resource('books','BookController');
 Route::resource('departments','DepartmentController');
 Route::resource('years','YearController');
-});	
+// });	
 
 
 Auth::routes();
