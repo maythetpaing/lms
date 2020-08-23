@@ -42,13 +42,12 @@
 				<td>{{$book->edition}}</td>
 				<td>
 					<a href="{{route('books.edit',$book->id)}}" class="btn btn-warning">
-					<i class="far fa-edit"></i>
+					{{-- <i class="far fa-edit"></i> --}}
 					Edit</a>
-					<form method="post" action="{{route('books.destroy',$book->id)}}" class="d-inline-block">
+					<form method="POST" action="{{route('books.destroy',$book->id)}}" onsubmit="return confirm('Are you sure ?')" class="d-inline-block">
 						@csrf
 						@method('DELETE')
-						<input type="submit" name="btnsubmit" value="Delete" class="btn btn-danger delete" onclick="sweetAlert()">
-						
+						<input type="submit" name="btnsubmit" value="Delete" class="btn btn-danger">
 					</form>
 					
 				</td>

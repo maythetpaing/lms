@@ -15,6 +15,9 @@
   <!-- Bootstrap core CSS -->
   <link href="{{asset('frontend/vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
 
+  {{-- Fontawesome --}}
+  <link href="{{asset('frontend/fontawesome/css/all.min.css')}}" rel="stylesheet">
+
   <!-- Custom styles for this template -->
   <link href="{{asset('frontend/css/shop-homepage.css')}}" rel="stylesheet">
 
@@ -35,18 +38,26 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item active">
-            <a class="nav-link text-white" href="#">Home
+            <a class="nav-link text-white" href="#">
+              <i class="fas fa-home"></i>
+              Home
               <span class="sr-only">(current)</span>
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Books</a>
+            <a class="nav-link" href="#">
+              <i class="fas fa-book"></i>
+            Books</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
+            <a class="nav-link" href="#">
+              <i class="far fa-file-alt"></i>
+            About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Contact</a>
+            <a class="nav-link" href="#">
+              <i class="fas fa-address-book"></i>
+            Contact</a>
           </li>
          {{--  <li class="nav-item">
             <a class="nav-link" href="#" >Cart<span id="item_count"></span></a>
@@ -114,15 +125,42 @@
   <!-- /.container -->
 {{-- </footer> --}}
 
- {{-- <iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=Asia%2FYangon" style="border:solid 1px #777" width="200" height="200" frameborder="0" scrolling="no"></iframe> --}}
+{{-- <iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=Asia%2FYangon" style="border:solid 1px #777" width="200" height="200" frameborder="0" scrolling="no"></iframe> --}}
 
 <!-- footer -->
-    <footer class="footer">
-      <div class="container text-light text-center text-white text-monospace">
-         <div class="container">
-        <p class="footertext m-0">Copyright &copy; All Right Result | Powered By Web-Design-2020 </p>
-      </div>
-    </footer>
+<footer class="footer">
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-4 col-sm-12 py-2">
+      <h1 class="text-center">Hello</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint 
+      proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+    <div class="col-md-4 col-sm-12  py-2">
+      <h1 class="text-center">Wellcome to</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint 
+      proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+    <div class="col-md-4 col-sm-12 py-2">
+      <h1 class="text-center">Our library</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint 
+      proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+  </div> 
+</div>  
+
+ 
+  <div class="container text-light text-center text-white text-monospace">
+   <div class="container py-2">
+     <hr>
+    <p class="footertext m-0">Copyright &copy; All Right Result | Powered By Web-Design-2020 </p>
+   </div>
+  </div>
+</footer>
 
 <!-- Bootstrap core JavaScript -->
 <script src="{{asset('frontend/vendor/jquery/jquery.min.js')}}"></script>

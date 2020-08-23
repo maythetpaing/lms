@@ -22,7 +22,7 @@
 				<td>
 				
 					<a href="{{route('categories.edit',$category->id)}}" class="btn btn-warning">
-					<i class="far fa-edit"></i>
+					{{-- <i class="far fa-edit"></i> --}}
 					Edit</a>
 					<form method="post" action="{{route('categories.destroy',$category->id)}}" onsubmit="return confirm('Are you sure?')" class="d-inline-block">
 						@csrf

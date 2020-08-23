@@ -22,7 +22,7 @@
 				<td>
 				
 					<a href="{{route('years.edit',$year->id)}}" class="btn btn-warning">
-					<i class="far fa-edit"></i>	
+					{{-- <i class="far fa-edit"></i>	 --}}
 					Edit</a>
 					<form method="post" action="{{route('years.destroy',$year->id)}}" onsubmit="return confirm('Are you sure?')" class="d-inline-block">
 						@csrf

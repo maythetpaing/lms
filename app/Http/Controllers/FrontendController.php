@@ -10,6 +10,10 @@ class FrontendController extends Controller
     {
     	return view('frontend.home');
     }
+    public function detail($value='')
+    {
+        return view('frontend.detail');
+    }
     public function login($value=''){
     	return view('frontend.login');
 	}
