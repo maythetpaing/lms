@@ -1,7 +1,7 @@
 @extends('frontendtemplate')
 
 @section('content')
-<div class="col-lg-9 my-5">
+{{-- <div class="col-lg-9 my-5"> --}}
 
 	<div id="carouselExampleIndicators" class="carousel slide my-4" data-ride="carousel">
 		<ol class="carousel-indicators">
@@ -11,15 +11,15 @@
 		</ol>
 		<div class="carousel-inner" role="listbox">
 			<div class="carousel-item active">
-				{{-- <img class="d-block img-fluid" src="#" alt="First slide"> --}}
+				<img class="d-block img-fluid" src="{{asset('backend/img/l1.jpg')}}" alt="First slide">
 				<h1 class="text-center">Hello</h1>
 			</div>
 			<div class="carousel-item">
-				{{-- <img class="d-block img-fluid" src="#" alt="Second slide"> --}}
+				<img class="d-block img-fluid" src="{{asset('backend/img/l1.jpg')}}" alt="Second slide">
 				<h1 class="text-center">Wellcome</h1>
 			</div>
 			<div class="carousel-item">
-				{{-- <img class="d-block img-fluid" src="#" alt="Third slide"> --}}
+				<img class="d-block img-fluid" src="{{asset('backend/img/l1.jpg')}}" alt="Third slide">
 				<h2 class="text-center">UCS Library</h2>
 			</div>
 		</div>
@@ -33,7 +33,42 @@
 		</a>
 	</div>
 
-</div>
+	{{-- other --}}
+	<div class="container mt-5">
+		<h5 class="text-center p-0">Library</h5>
+		<p class="text-center logo m-0 p-0"><b><i class="fas fa-utensils"></i>Good Book</b></p>
+		<p class="text-center logoglass m-0 p-0"><i class="fas fa-glass-cheers"></i></p>
+		<p class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span></p>
+	</div>
+	<div class="container mt-5">
+		<h5 class="text-center p-0">Library</h5>
+		<p class="text-center logo m-0 p-0"><b><i class="fas fa-utensils"></i>Good Book</b></p>
+		<p class="text-center logoglass m-0 p-0"><i class="fas fa-glass-cheers"></i></p>
+		<p class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span></p>
+	</div>
+	<div class="container mt-5">
+		<h5 class="text-center p-0">Library</h5>
+		<p class="text-center logo m-0 p-0"><b><i class="fas fa-utensils"></i>Good Book</b></p>
+		<p class="text-center logoglass m-0 p-0"><i class="fas fa-glass-cheers"></i></p>
+		<p class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span></p>
+	</div>
+
+{{-- </div> --}}
 @endsection
 @section('script')
 <script type="text/javascript" src="{{asset('frontend/js/script.js')}}"></script>
