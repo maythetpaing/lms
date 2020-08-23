@@ -10,6 +10,41 @@
  * Copyright 2011-2020 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
+.log{
+  margin-top: 20%;
+  margin-bottom:0px;
+}
+
+    .box{
+      width: 500px;
+      margin-top: 20%;
+      padding: 40px;
+      top:50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      background: #5a5c69;
+      text-align: center;
+    }
+    .box input[type="email"],.box input[type="password"]{
+      border:0;
+      background: none;
+      display: block;
+      margin-top:50px;
+      text-align: center;
+      border: 2px solid #3498db;
+      padding: 14px 10px;
+      width: 200px;
+      outline: none;
+      color: white;
+      border-radius: 24px;
+      transition: 0.25s;
+
+    }
+    .box input[type="email"]:focus,.box input[type="password"]:focus{
+      width: 280px;
+      border-color: #2ecc71;
+    }
+
 :root {
   --blue: #4e73df;
   --indigo: #6610f2;

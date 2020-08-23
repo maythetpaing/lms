@@ -24,6 +24,8 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('dashboard','BackendController@dashboard')->name('dashboard');
+Route::get('login','FrontendController@login')->name('login');
+Route::get('register','FrontendController@register')->name('register');
 
 
 Route::resource('authors','AuthorController');
