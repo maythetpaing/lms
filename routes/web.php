@@ -38,9 +38,6 @@ Route::resource('authors','AuthorController');
 Route::resource('categories','CategoryController');
 Route::resource('books','BookController');
 
-Route::resource('departments','DepartmentController');
-Route::resource('years','YearController');
-
 
 Auth::routes();
 
@@ -57,6 +54,3 @@ Route::get('bookstore','FrontendController@bookstore')->name('bookstore');
 
 Route::resource('members','MemberController');
 
-Route::resource('departments','DepartmentController');
-
-Route::get('contact','FrontendController@contact')->name('contact');
