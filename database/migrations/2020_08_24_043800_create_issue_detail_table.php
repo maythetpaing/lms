@@ -15,13 +15,13 @@ class CreateIssueDetailTable extends Migration
     {
         Schema::create('issue_detail', function (Blueprint $table) {
             $table->id();
-             $table->unsignedBigInteger('book_id');
+            $table->unsignedBigInteger('book_id');
             $table->unsignedBigInteger('user_id');
             $table->date('due_date');
             $table->integer('fee');
             $table->integer('status');
-
             $table->timestamps();
+
             $table->foreign('book_id')
                     ->references('id')
                     ->on('books')
@@ -30,6 +30,7 @@ class CreateIssueDetailTable extends Migration
                     ->references('id')
                     ->on('users')
                     ->onDelete('cascade');
+    
         });
     }
 
