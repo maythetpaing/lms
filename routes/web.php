@@ -37,9 +37,12 @@ Route::get('dashboard','BackendController@dashboard')->name('dashboard');
 Route::resource('authors','AuthorController');
 Route::resource('categories','CategoryController');
 Route::resource('books','BookController');
+
 Route::resource('departments','DepartmentController');
 Route::resource('years','YearController');
 //
+
+});	
 
 
 Auth::routes();
@@ -52,3 +55,7 @@ Route::get('contact','FrontendController@contact')->name('contact');
 
 
 
+
+Route::resource('members','MemberController');
+
+Route::resource('departments','DepartmentController');
