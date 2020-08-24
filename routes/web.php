@@ -52,6 +52,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('about','FrontendController@about')->name('about');
 Route::get('contact','FrontendController@contact')->name('contact');
+Route::get('bookstore','FrontendController@bookstore')->name('bookstore');
 
 
 

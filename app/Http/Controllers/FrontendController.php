@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Book;
 
 class FrontendController extends Controller
 {
@@ -10,10 +11,7 @@ class FrontendController extends Controller
     {
     	return view('frontend.home');
     }
-    public function detail($value='')
-    {
-        return view('frontend.detail');
-    }
+    
     public function login($value=''){
     	return view('frontend.login');
 	}
@@ -25,5 +23,11 @@ class FrontendController extends Controller
     }
      public function contact($value=''){
         return view('frontend.contact');
+    }
+   public function bookstore($value='')
+    {
+        $books=Book::all();
+        // dd($items);
+        return view('frontend.bookstore',compact('books'));
     }
 }
