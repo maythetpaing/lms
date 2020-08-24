@@ -42,7 +42,6 @@ Route::resource('departments','DepartmentController');
 Route::resource('years','YearController');
 //
 
-});	
 
 
 Auth::routes();
@@ -52,10 +51,3 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('about','FrontendController@about')->name('about');
 Route::get('contact','FrontendController@contact')->name('contact');
-
-
-
-
-Route::resource('members','MemberController');
-
-Route::resource('departments','DepartmentController');
