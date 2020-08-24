@@ -42,7 +42,7 @@ Route::resource('departments','DepartmentController');
 Route::resource('years','YearController');
 //
 
-});	
+// });	
 
 
 Auth::routes();
