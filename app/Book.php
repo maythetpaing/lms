@@ -17,7 +17,8 @@ class Book extends Model
      	return $this->belongsTo('App\Category');
 
     }
-    // public function orders($value=''){
-    //     	return $this->belongsToMany('App\Order','order_detail')->withPivot('qty')->withTimestamps();
-    //     }
+    //
+    public function issues($value=''){
+        	return $this->belongsToMany('App\Issue','issue_detail')->withPivot('fee','status','due_date')->withTimestamps();
+        }
 }

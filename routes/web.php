@@ -37,6 +37,7 @@ Route::get('dashboard','BackendController@dashboard')->name('dashboard');
 Route::resource('authors','AuthorController');
 Route::resource('categories','CategoryController');
 Route::resource('books','BookController');
+Route::resource('issues','IssueController');
 
 
 Auth::routes();
