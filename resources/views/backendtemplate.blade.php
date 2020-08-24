@@ -67,7 +67,7 @@
         <li class="nav-item">
           <a class="nav-link collapsed" href="#" aria-expanded="true" aria-controls="collapseUtilities">
             <i class="fas fa-pager"></i>
-            <span>Issue Detail</span>
+            <span>Issue</span>
           </a>
         </li>
 
