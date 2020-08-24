@@ -53,7 +53,11 @@ class RegisterController extends Controller
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
-            'phone'=>['required','string']
+            'phone'=>['required','string','min:9'],
+            'address'=>['required','string','max:255'],
+            'dep_id'=>['required','integer','max:10'],
+            'year_id'=>['required','integer','max:10'],
+
         ]);
     }
 
@@ -64,9 +68,8 @@ class RegisterController extends Controller
      * @return \App\User
      */
     protected function create(array $data)
-    {
-        // dd($data);
-        $user = User::create([
+    { dd($data);
+        $user= User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
@@ -75,9 +78,7 @@ class RegisterController extends Controller
             'dep_id'=>$data['dep_id'],
             'year_id'=>$data['year_id'],
         ]);
-
-        $user->assignRole('customer');
-
+        $user->assignRole('student');
         return $user;
     }
 }

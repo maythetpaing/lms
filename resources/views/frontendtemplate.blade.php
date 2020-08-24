@@ -38,7 +38,7 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item active">
-            <a class="nav-link text-white" href="#">
+            <a class="nav-link text-white" href="{{route('home')}}">
               <i class="fas fa-home"></i>
               Home
               <span class="sr-only">(current)</span>
@@ -50,12 +50,12 @@
             Books</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="{{route('about')}}">
               <i class="far fa-file-alt"></i>
             About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="{{route('contact')}}">
               <i class="fas fa-address-book"></i>
             Contact</a>
           </li>
@@ -64,7 +64,7 @@
           </li> --}}
           <li class="nav-item">
             {{-- <a class="nav-link" href="{{route('profile')}}">Mg Mg</a> --}}
-            {{-- @guest
+            @guest
             <li class="nav-item">
               <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
             </li>
@@ -93,7 +93,7 @@
             </form>
           </div>
         </li>
-        @endguest --}}
+        @endguest
       </li>
     </ul>
   </div>
@@ -134,21 +134,15 @@
   <div class="row">
     <div class="col-md-4 col-sm-12 py-2">
       <h1 class="text-center">Hello</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-      tempor incididunt velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint 
-      proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <p>The basic functions of library management include, but are not limited to: planning and negotiating the acquisition of materials, Interlibrary Loan (ILL) requests, stacks maintenance, overseeing fee collection, event planning, fundraising, and human resources.</p>
     </div>
     <div class="col-md-4 col-sm-12  py-2">
       <h1 class="text-center">Wellcome to</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-      tempor incididunt velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint 
-      proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <p>Most of the libraries that store physical media like books, periodicals, film, and other objects adhere to some derivative of the Dewey Decimal System as their method for tagging, storing, and retrieving materials based on unique identifiers.</p>
     </div>
     <div class="col-md-4 col-sm-12 py-2">
       <h1 class="text-center">Our library</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-      tempor incididunt velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint 
-      proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <p>The use of such systems have caused librarians to develop and leverage common constructs that act as tools for both library professionals and library users alike. These constructs include master catalogs, domain catalogs, indexes, unique identifiers, unique identifier tokens, and artifacts .</p>
     </div>
   </div> 
 </div>  

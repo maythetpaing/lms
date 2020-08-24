@@ -19,12 +19,21 @@ class CreateUsersTable extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
+            $table->string('phone');
             $table->string('address');
-            $table->string('dep_id');
-            $table->string('year_id');
+            $table->unsignedBigInteger('dep_id');
+            $table->unsignedBigInteger('year_id');
             
             $table->rememberToken();
             $table->timestamps();
+             $table->foreign('dep_id')
+                    ->references('id')
+                    ->on('departments')
+                    ->onDelete('cascade');
+            $table->foreign('year_id')
+                    ->references('id')
+                    ->on('years')
+                    ->onDelete('cascade');
         });
     }
 
