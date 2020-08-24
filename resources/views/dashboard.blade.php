@@ -1,6 +1,6 @@
 @extends('backendtemplate')
 @section('content')
-{{-- <<<<<<< HEAD --}}
+
 <!-- Begin Page Content -->
 <div class="container-fluid">
 
