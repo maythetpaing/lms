@@ -20,4 +20,10 @@ class FrontendController extends Controller
 	 public function register($value=''){
     	return view('frontend.register');
 	}
+    public function about($value=''){
+        return view('frontend.about');
+    }
+     public function contact($value=''){
+        return view('frontend.contact');
+    }
 }

@@ -1,4 +1,3 @@
-
 @extends('frontendtemplate')
 
 @section('content')

@@ -28,6 +28,7 @@ Route::get('register','FrontendController@register')->name('register');
 
 
 // Backend---------
+
 Route::middleware('role:admin')->group(function () {
 Route::get('dashboard','BackendController@dashboard')->name('dashboard');
 Route::resource('authors','AuthorController');
@@ -40,8 +41,10 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('login','FrontendController@login')->name('login');
-Route::get('register','FrontendController@register')->name('register');
+
+Route::get('about','FrontendController@about')->name('about');
+Route::get('contact','FrontendController@contact')->name('contact');
+
 
 
 
