@@ -41,7 +41,7 @@
 			<td>{{$book->noc}}</td>
 			<td>{{$book->edition}}</td>
 			<td>
-				<a href="{{route('issues.create')}}" class="btn btn-success">
+				<a href="{{route('issues.create',$book->id)}}" class="btn btn-success issue">
 					{{-- <i class="far fa-edit"></i> --}}
 
 				Add Issue</a>
@@ -57,21 +57,9 @@
 				
 			</td>
 		</tr>
-		@endforeach()
+		@endforeach
 	</tbody>
 </table>
-
-					Edit</a>
-					<form method="POST" action="{{route('books.destroy',$book->id)}}" onsubmit="return confirm('Are you sure ?')" class="d-inline-block">
-						@csrf
-						@method('DELETE')
-						<input type="submit" name="btnsubmit" value="Delete" class="btn btn-danger">
-					</form>
-				</td>
-			</tr>
-			@endforeach()
-		</tbody>
-	</table>
 
 </div>
 {{-- detail modal --}}
@@ -140,4 +128,25 @@
 	}
 </script>
 
+@section('script')
+<script>
+	$(document).ready(function(){
+		$('.issue').click(function(){
+			// alert('box!');
+
+			var id=$(this).data('id');
+			var codeno=$(this).data('codeno');
+			var name=$(this).data('name');
+			var noc=$(this).data('noc');
+			var edition=$(this).data('edition');
+			var fee=$(this).data('fee');
+			var due_date=$(this).data('due_date');
+
+
+		});
+		//delete
+		
+	})
+</script>
+@endsection
 
