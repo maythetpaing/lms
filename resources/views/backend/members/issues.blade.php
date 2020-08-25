@@ -1,0 +1,48 @@
+@extends('backendtemplate')
+@section('content')
+<div id="checkout_body" style="margin-top: 100px;">
+	<div class="container my-5 text-center">
+		<div class="row">
+			<div class="offset-md-2 col-md-8">
+				<h3 class="py-3">Issue</h3>
+				<div class="table-responsive">
+					<table class="table table-bordered">
+						<thead>
+							<tr>
+								<th>No</th>
+									<th>Member </th>
+								<th>Book</th>
+								{{-- <th>Status</th> --}}
+								{{-- <th>User</th> --}}
+								<th>Issue Date</th>
+								<th>Due Date</th>
+								<th>Action</th>
+							</tr>
+						</thead>
+						<tbody>
+							@php $i=1; @endphp
+							{{-- @foreach($orders as $order)
+							<tr>
+								<td>{{$i++}}</td>	
+								<th>{{$order->voucherno}}</th>
+								<th>{{$order->orderdate}}</th>
+								<th>{{$order->note}}</th>
+								<th>{{$order->total}}</th>
+								<td>
+									<a href="{{route('orders.show',$order->id)}}"><button class="btn btn-info">Detail</button></a>
+									<form method="POST" action="{{route('orders.destroy',$order->id)}}" onsubmit="return confirm('Are you sure ?')" class="float-right">
+										@csrf
+										@method('DELETE')
+										<input type="submit" name="btnsubmit" value="Confirm" class="btn btn-warning">
+									</form>
+								</td>
+							</tr>
+							@endforeach --}}
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+@endsection

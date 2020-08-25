@@ -41,10 +41,6 @@
 			<td>{{$book->noc}}</td>
 			<td>{{$book->edition}}</td>
 			<td>
-				<form method="POST" action="{{route('issues.create',$book->id)}}" class="d-inline-block">
-				@csrf
-					<a href="{{route('issues.create')}}" class="btn btn-success issue" data-id="{{$book->id}}" data-codeno="{{$book->codeno}}"data-name="{{$book->name}}" data-noc="{{$book->noc}}" data-edition="{{$book->edition}}">
-					Add Issue</a>
 				</form>	
 				<a href="{{route('books.edit',$book->id)}}" class="btn btn-warning">
 					{{-- <i class="far fa-edit"></i> --}}
@@ -116,25 +112,4 @@
 </script>
 @endsection
 
-@section('script')
-<script>
-	$(document).ready(function(){
-		$('.issue').click(function(){
-			// alert('box!');
-
-			var id=$(this).data('id');
-			var codeno=$(this).data('codeno');
-			var name=$(this).data('name');
-			var noc=$(this).data('noc');
-			var edition=$(this).data('edition');
-			var fee=$(this).data('fee');
-			var due_date=$(this).data('due_date');
-
-
-		});
-		//delete
-		
-	})
-</script>
-@endsection
 

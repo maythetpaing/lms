@@ -63,13 +63,6 @@
           </a>
         </li>
 
-        
-        <li class="nav-item">
-          <a class="nav-link collapsed" href="{{route('issues.index')}}" aria-expanded="true" aria-controls="collapseUtilities">
-            <i class="fas fa-pager"></i>
-            <span>Issue</span>
-          </a>
-        </li>
         <li class="nav-item">
           <a class="nav-link collapsed" href="{{route('members.index')}}" aria-expanded="true" aria-controls="collapseUtilities">
             <i class="fas fa-pager"></i>
@@ -77,6 +70,12 @@
           </a>
         </li>
 
+         <li class="nav-item">
+          <a class="nav-link collapsed" href="{{route('issues.index')}}" aria-expanded="true" aria-controls="collapseUtilities">
+            <i class="fas fa-pager"></i>
+            <span>Issue</span>
+          </a>
+        </li>
         <!-- Divider -->
         <hr class="sidebar-divider">
 
