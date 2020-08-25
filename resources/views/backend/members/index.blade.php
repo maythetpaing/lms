@@ -28,9 +28,7 @@
 				<td>{{$member->edulevel}}</td>
 				
 				<td>
-					<a href="#" class="btn btn-warning">
-					{{-- <i class="far fa-edit"></i> --}}
-					Issue</a>
+				
 					<a href="{{route('members.edit',$member->id)}}" class="btn btn-warning">
 					{{-- <i class="far fa-edit"></i> --}}
 					Edit</a>

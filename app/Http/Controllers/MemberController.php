@@ -45,6 +45,7 @@ class MemberController extends Controller
             'address'=>'required',
             'edulevel'=>'required',
         ]);
+        //
 
        
 

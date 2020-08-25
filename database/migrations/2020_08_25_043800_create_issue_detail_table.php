@@ -15,7 +15,17 @@ class CreateIssueDetailTable extends Migration
     {
         Schema::create('issue_detail', function (Blueprint $table) {
              $table->id();
+             $table->unsignedBigInteger('member_id');
+              $table->unsignedBigInteger('book_id');
+              $table->date('issue_date');
+              $table->date('due_date');
+              $table->integer('status');
+              $table->integer('fee');
+
             $table->timestamps();
+            $table->foreign('book_id')->references('id')->on('books')->onDelete('cascade');
+            $table->foreign('member_id')->references('id')->on('members')->onDelete('cascade');
+
         });
     }
 

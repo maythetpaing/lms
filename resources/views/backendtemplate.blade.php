@@ -63,11 +63,17 @@
           </a>
         </li>
 
-        <!-- Nav Item - Utilities Collapse Menu -->
+        
         <li class="nav-item">
-          <a class="nav-link collapsed" href="#" aria-expanded="true" aria-controls="collapseUtilities">
+          <a class="nav-link collapsed" href="{{route('issues.index')}}" aria-expanded="true" aria-controls="collapseUtilities">
             <i class="fas fa-pager"></i>
             <span>Issue</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link collapsed" href="{{route('members.index')}}" aria-expanded="true" aria-controls="collapseUtilities">
+            <i class="fas fa-pager"></i>
+            <span>Member</span>
           </a>
         </li>
 
@@ -94,7 +100,6 @@
             <i class="fas fa-fw fa-folder"></i>
             <span>Category</span></a>
           </li>
-
 
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">

@@ -10,5 +10,13 @@ class Member extends Model
     ];
     public function issues($value=''){
         	return $this->belongsToMany('App\Issue');
+
+    // public function issue($value=''){
+    //     	return $this->belongsToMany('App\Issue');
+    //     }
+         public function books($value=''){
+        	return $this->belongsToMany('App\Book','issue_detail')	
+                    	->withPivot('fee','status','due_date')
+        				->withTimestamps();
         }
 }

@@ -10,55 +10,12 @@ $(document).ready(function(){
 
 
 
-	$('.row').on('click','.view_detail',function(){
-		var id = $(this).data('id');
-		var name = $(this).data('name');
-		var photo = $(this).data('photo');
-		var price = $(this).data('price');
-		var discount = $(this).data('discount');
-		var brand = $(this).data('brand');
-		var subcategory = $(this).data('subcategory');
-		var description = $(this).data('description');
+	
 
-		$(".pimg").attr('src',"backend/"+photo);
-		$(".pname").html("Item Name: "+name);
-		// $(".pprice").html("Item Price: "+price);
-		if (discount) {
-			
-			$(".pprice").html("Item Discount:"+discount);
-		}else{
-			$(".pprice").html("Item Price:"+price);
-		};
-
-		$(".pbrand").html("Item Brand: "+brand);
-		$(".psubcategory").html("Item Category: "+subcategory);
-		// $(".pdiscount").html("Item Discount: "+discount);
-		$(".pdescription").html("Description: </br>"+description);
-		$(".addtocart").attr({'data-id':id,'data-name':name,'data-photo':photo,'data-price':price,'data-discount':discount});
-
-
-	});
-
-	// Count
-	function count(){
-		var shopString = localStorage.getItem("heinshop");
-		if (shopString) {
-			var shopArray = JSON.parse(shopString);
-			if (shopArray!=0) {
-				var count=shopArray.length;
-				$("#item_count").text(count);
-			}else {
-				$("#item_count").text('()');	
-			}
-
-		}else {
-			$("#item_count").text('()');	
-		}
-	};
-
+	
 
 	// Add To Cart
-	$(".addtocart").on('click',function(){
+	$(".issue").on('click',function(){
 		var item_qty=parseInt($('#qty').val());
 		var id = $(this).data('id');
 		var name = $(this).data('name');
@@ -110,7 +67,7 @@ $(document).ready(function(){
 
 	});
 
-	// Show to Table Data
+	Show to Table Data
 	function getData(){
 		var shopString = localStorage.getItem("heinshop");
 		if (shopString) {

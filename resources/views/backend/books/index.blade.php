@@ -116,4 +116,25 @@
 </script>
 @endsection
 
+@section('script')
+<script>
+	$(document).ready(function(){
+		$('.issue').click(function(){
+			// alert('box!');
+
+			var id=$(this).data('id');
+			var codeno=$(this).data('codeno');
+			var name=$(this).data('name');
+			var noc=$(this).data('noc');
+			var edition=$(this).data('edition');
+			var fee=$(this).data('fee');
+			var due_date=$(this).data('due_date');
+
+
+		});
+		//delete
+		
+	})
+</script>
+@endsection
 
