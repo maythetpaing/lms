@@ -42,7 +42,7 @@
 
 			<div class="form-group">
 				<label>Issue Date</label>
-				<input type="text" name="issue_date" class="form-control @error('issue_date') is-invalid @enderror" id="issue_date">
+				<input type="date" name="issue_date" class="date form-control @error('issue_date') is-invalid @enderror" id="issue_date">
 				@error('issue_date')
 				<div class="alert alert-danger">{{ $message }}</div>
 				@enderror
@@ -53,7 +53,7 @@
 
 			<div class="form-group">
 				<label>Due Date</label>
-				<input type="text" name="due_date" class="form-control @error('due_date') is-invalid @enderror" id="due_date">
+				<input type="date" name="due_date" class="form-control @error('due_date') is-invalid @enderror" id="due_date">
 				@error('due_date')
 				<div class="alert alert-danger">{{ $message }}</div>
 				@enderror
@@ -61,11 +61,18 @@
 			</div>
 			<div class="form-group">
 				<label>Status</label>
-				<input type="text" name="edition" class="form-control @error('edition') is-invalid @enderror" id="edition">
+				<input type="text" name="status" class="form-control @error('edition') is-invalid @enderror" id="edition">
 				@error('edition')
 				<div class="alert alert-danger">{{ $message }}</div>
 				@enderror
-				
+			</div>
+
+			<div class="form-group">
+				<label>Penalty Fee</label>
+				<input type="number" name="fee" class="form-control @error('fee') is-invalid @enderror" id="fee">
+				@error('fee')
+				<div class="alert alert-danger">{{ $message }}</div>
+				@enderror
 			</div>
 			
 			<input type="submit" value="save" class="btn btn-outline-primary">

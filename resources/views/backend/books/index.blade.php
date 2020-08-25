@@ -49,7 +49,6 @@
 						@method('DELETE')
 						<input type="submit" name="btnsubmit" value="Delete" class="btn btn-danger">
 					</form>
-					
 				</td>
 			</tr>
 			@endforeach()

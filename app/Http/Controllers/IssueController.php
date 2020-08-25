@@ -42,26 +42,28 @@ class IssueController extends Controller
      */
     public function store(Request $request)
     {
+         // dd($request->notes);
+
        $request->validate([
             'member'=>'required',
             'book'=>'required',
             'issue_date'=>'required',
             'due_date'=>'required',
-            'status'=>'required',
+            // 'status'=>'required',
 
         ]);
-       
+       dd($request);
         //data insert
-        $issue=new Issue;
-         // $item->table-column=$request->form input type name;
-        $issue->book_id=$request->book;
-        $issue->member_id=$request->member;
-        $issue->issue_date=$request->issue_date;
-        $issue->due_date=$request->due_date;
-        $issue->status=$request->status;
+        // $issue=new Issue;
+        //  // $item->table-column=$request->form input type name;
+        // $issue->member_id=$request->member;
+        // $issue->book_id=$request->book;
+        // $issue->issue_date=$request->issue_date;
+        // $issue->due_date=$request->due_date;
+        // // $issue->status=$request->status;
      
-        $issue->save(); 
-         return redirect()->route('issues.index');
+        // $issue->save(); 
+        //  return redirect()->route('issues.index');
     }
 
     /**
@@ -72,7 +74,9 @@ class IssueController extends Controller
      */
     public function show($id)
     {
-        //
+         $issue = Issue::find($id);
+        // dd($book);
+        return view('backend.issues.show',compact('issue'));
     }
 
     /**
@@ -83,7 +87,11 @@ class IssueController extends Controller
      */
     public function edit($id)
     {
-        //
+        $books=Book::all();
+        // to retrieve data from subcategory
+        $members=Member::all();
+        $issue =Issue::find($id);
+        return view('backend.issues.edit',compact('books','members','issue'));
     }
 
     /**
@@ -95,7 +103,28 @@ class IssueController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+         $request->validate([
+            'member'=>'required',
+            'book'=>'required',
+            'issue_date'=>'required',
+            'due_date'=>'required',
+            'fee'=>'required',
+            // 'status'=>'required',
+
+        ]);
+
+         //data insert
+        $issue=Issue::find($id);
+         // $item->table-column=$request->form input type name;
+        $issue->member_id=$request->member;
+        $issue->book_id=$request->book;
+        $issue->issue_date=$request->issue_date;
+        $issue->due_date=$request->due_date;
+        $issue->fee=$request->fee;
+        // $issue->status=$request->status;
+     
+        $issue->save(); 
+         return redirect()->route('issues.index');
     }
 
     /**
@@ -106,6 +135,9 @@ class IssueController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $issue=Issue::find($id);
+        $issue->delete();
+        //redirect
+        return redirect()->route('issue.index');
     }
 }
