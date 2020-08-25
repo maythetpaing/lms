@@ -41,37 +41,24 @@
 			<td>{{$book->noc}}</td>
 			<td>{{$book->edition}}</td>
 			<td>
-				<a href="{{route('issues.create')}}" class="btn btn-success">
-					{{-- <i class="far fa-edit"></i> --}}
-
-				Add Issue</a>
+				<form method="POST" action="{{route('issues.create',$book->id)}}" class="d-inline-block">
+				@csrf
+					<a href="{{route('issues.create')}}" class="btn btn-success issue" data-id="{{$book->id}}" data-codeno="{{$book->codeno}}"data-name="{{$book->name}}" data-noc="{{$book->noc}}" data-edition="{{$book->edition}}">
+					Add Issue</a>
+				</form>	
 				<a href="{{route('books.edit',$book->id)}}" class="btn btn-warning">
 					{{-- <i class="far fa-edit"></i> --}}
 				Edit</a>
-				
 				<form method="POST" action="{{route('books.destroy',$book->id)}}" onsubmit="return confirm('Are you sure ?')" class="d-inline-block">
 					@csrf
 					@method('DELETE')
 					<input type="submit" name="btnsubmit" value="Delete" class="btn btn-danger">
 				</form>
-				
 			</td>
 		</tr>
-		@endforeach()
+		@endforeach
 	</tbody>
 </table>
-
-					Edit</a>
-					<form method="POST" action="{{route('books.destroy',$book->id)}}" onsubmit="return confirm('Are you sure ?')" class="d-inline-block">
-						@csrf
-						@method('DELETE')
-						<input type="submit" name="btnsubmit" value="Delete" class="btn btn-danger">
-					</form>
-				</td>
-			</tr>
-			@endforeach()
-		</tbody>
-	</table>
 
 </div>
 {{-- detail modal --}}
@@ -128,16 +115,5 @@
 	})
 </script>
 @endsection
-{{-- import swal from 'sweetalert'; --}}
-<script src="'https://unpkg.com/sweetalert/dist/sweetalert.min.js">
-	function sweetAlert(){
-		swal("What do you want to do",{
-			dangerMode:true,
-			buttons:true,
-		})
-
-		
-	}
-</script>
 
 
