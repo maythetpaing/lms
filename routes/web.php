@@ -13,45 +13,37 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-
+// Frontend
 Route::get('/','FrontendController@home')->name('homepage');
 
 Route::get('detail','FrontendController@detail')->name('detail');
 
 Route::get('detail/{id}','FrontendController@detail')->name('detail');
 
-Route::get('login','FrontendController@login')->name('login');
-
-Route::get('profile','FrontendController@profile')->name('profile');
-
-Route::get('register','FrontendController@register')->name('register');
+Route::get('about','FrontendController@about')->name('about');
+Route::get('contact','FrontendController@contact')->name('contact');
+Route::get('bookstore','FrontendController@bookstore')->name('bookstore');
 
 
 // Backend---------
 
-// Route::middleware('role:admin')->group(function () {
+Route::middleware('role:admin')->group(function () {
 
-// });	
-//
 Route::get('dashboard','BackendController@dashboard')->name('dashboard');
 Route::resource('authors','AuthorController');
 Route::resource('categories','CategoryController');
 Route::resource('books','BookController');
 Route::resource('issues','IssueController');
 
+Route::resource('members','MemberController');
 
+});	
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
 
-Route::get('about','FrontendController@about')->name('about');
+Route::get('login','FrontendController@login')->name('login');
 
-Route::get('contact','FrontendController@contact')->name('contact');
-Route::get('bookstore','FrontendController@bookstore')->name('bookstore');
-
-
-
-
-Route::resource('members','MemberController');
+Route::get('register','FrontendController@register')->name('register');
 

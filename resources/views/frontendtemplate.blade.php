@@ -69,11 +69,7 @@
               <i class="fas fa-address-book"></i>
             Contact</a>
           </li>
-         {{--  <li class="nav-item">
-            <a class="nav-link" href="#" >Cart<span id="item_count"></span></a>
-          </li> --}}
-          <li class="nav-item">
-            {{-- <a class="nav-link" href="{{route('profile')}}">Mg Mg</a> --}}
+        {{--   <li class="nav-item">
             @guest
             <li class="nav-item">
               <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
@@ -104,7 +100,7 @@
           </div>
         </li>
         @endguest
-      </li>
+      </li> --}}
     </ul>
   </div>
 </div>

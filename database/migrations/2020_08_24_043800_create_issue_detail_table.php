@@ -14,23 +14,8 @@ class CreateIssueDetailTable extends Migration
     public function up()
     {
         Schema::create('issue_detail', function (Blueprint $table) {
-            $table->id();
-            $table->unsignedBigInteger('book_id');
-            $table->unsignedBigInteger('user_id');
-            $table->date('due_date');
-            $table->integer('fee');
-            $table->integer('status');
+             $table->id();
             $table->timestamps();
-
-            $table->foreign('book_id')
-                    ->references('id')
-                    ->on('books')
-                    ->onDelete('cascade');
-            $table->foreign('user_id')
-                    ->references('id')
-                    ->on('users')
-                    ->onDelete('cascade');
-    
         });
     }
 
