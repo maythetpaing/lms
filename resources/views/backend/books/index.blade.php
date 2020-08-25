@@ -29,32 +29,36 @@
 
 					<a href="#" class="box" 
 					data-name="{{$book->name}}" data-photo="{{asset($book->photo)}}"
-					 
+					
 					data-edition="{{$book->edition}}"
 					
-					 data-desc="{{$book->description}}"
-					  >
-						<span class="badge badge-primary badge-pill">Modal</span>
-					</a>
-				</td>
-				<td>{{$book->name}}</td>
-				<td>{{$book->noc}}</td>
-				<td>{{$book->edition}}</td>
-				<td>
-					<a href="{{route('books.edit',$book->id)}}" class="btn btn-warning">
+					data-desc="{{$book->description}}"
+					>
+					<span class="badge badge-primary badge-pill">Modal</span>
+				</a>
+			</td>
+			<td>{{$book->name}}</td>
+			<td>{{$book->noc}}</td>
+			<td>{{$book->edition}}</td>
+			<td>
+				<a href="{{route('issues.create')}}" class="btn btn-success">
 					{{-- <i class="far fa-edit"></i> --}}
-					Edit</a>
-					<form method="POST" action="{{route('books.destroy',$book->id)}}" onsubmit="return confirm('Are you sure ?')" class="d-inline-block">
-						@csrf
-						@method('DELETE')
-						<input type="submit" name="btnsubmit" value="Delete" class="btn btn-danger">
-					</form>
-					
-				</td>
-			</tr>
-			@endforeach()
-		</tbody>
-	</table>
+				Add Issue</a>
+				<a href="{{route('books.edit',$book->id)}}" class="btn btn-warning">
+					{{-- <i class="far fa-edit"></i> --}}
+				Edit</a>
+				
+				<form method="POST" action="{{route('books.destroy',$book->id)}}" onsubmit="return confirm('Are you sure ?')" class="d-inline-block">
+					@csrf
+					@method('DELETE')
+					<input type="submit" name="btnsubmit" value="Delete" class="btn btn-danger">
+				</form>
+				
+			</td>
+		</tr>
+		@endforeach()
+	</tbody>
+</table>
 </div>
 {{-- detail modal --}}
 <div class="modal fade" tabindex="-1" id="mymodal">
@@ -120,6 +124,6 @@
 
 		
 	}
-	</script>
+</script>
 
 

@@ -7,6 +7,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
+  {{-- new --}}
+  <meta name="description" content="Animated Books with CSS 3D Transforms" />
+  <meta name="keywords" content="book, 3d, interactive, animated, 3d transform, css, web design" />
+  <meta name="author" content="Marco Barría for Codrops" />
+  <link rel="shortcut icon" href="../favicon.ico">
+  <link rel="stylesheet" type="text/css" href="{{asset('frontend/css/normalize.css')}}" />
+  <link rel="stylesheet" type="text/css" href="{{asset('frontend/css/demo.css')}}" />
+  <link rel="stylesheet" type="text/css" href="{{asset('frontend/css/book.css')}}" />
+  <script src="{{asset('frontend/js/modernizr.custom.js')}}"></script>
   <meta name="csrf-token" content="{{ csrf_token() }}">
 
   <title>Library Management System</title>
@@ -20,6 +29,7 @@
 
   <!-- Custom styles for this template -->
   <link href="{{asset('frontend/css/shop-homepage.css')}}" rel="stylesheet">
+ 
 
 </head>
 

@@ -1,12 +1,10 @@
 @extends('frontendtemplate')
 
 @section('content')
-{{-- <div class="col-lg-9 my-5"> --}}
-	<{{-- link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.1.3/darkly/bootstrap.min.css">
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT" crossorigin="anonymous"></script> --}}
-	{{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment-with-locales.min.js"></script>
- --}}
+
+
+
+
 	<div id="carouselExampleIndicators" class="carousel slide my-4" data-ride="carousel">
 		<ol class="carousel-indicators">
 			<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -56,10 +54,11 @@
 		<p class="text-center logoglass m-0 p-0"><i class="fas fa-glass-cheers"></i></p>
 		<p class="text-center"></span></p>
 	</div>
-	{{-- <div id="calendar"></div> --}}
+	<div id="calendar"></div>
 
 {{-- </div> --}}
 @endsection
 @section('script')
 <script type="text/javascript" src="{{asset('frontend/js/script.js')}}"></script>
+
 @endsection
