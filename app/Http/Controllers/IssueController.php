@@ -50,7 +50,7 @@ class IssueController extends Controller
            $request->validate([
             'member'=>'required',
             'book'=>'required',
-            'issue_date'=>'required',
+            // 'issue_date'=>'required',
             'due_date'=>'required',
             // 'status'=>'required',
 
@@ -58,10 +58,12 @@ class IssueController extends Controller
        // dd($request);
         //data insert
         $issue=new Issue;
+        $issue->book_id=$request->book;
+        $issue->member_id=$request->member;
         
-        $issue->issue_date=$request->issue_date;
+        // $issue->issue_date=$request->issue_date;
         $issue->due_date=$request->due_date;
-        $issue->status=$request->status;
+        // $issue->status=$request->status;
      
         $issue->save(); 
          return redirect()->route('issues.index');

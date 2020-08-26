@@ -5,7 +5,7 @@
 
 
 
-<div id="carouselExampleIndicators" class="carousel slide my-4" data-ride="carousel">
+<div id="carouselExampleIndicators" class="carousel slide my-4 mt-5" data-ride="carousel">
 	<ol class="carousel-indicators">
 		<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
 		<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -180,7 +180,7 @@
                   alt="Card image cap">
                 <div class="card-body">
                   <h4 class="card-title">Java</h4>
-                  <p class="card-text">Java can drive innovation, & improve application services;first programming language for IoT, enterprise architecture, and cloud ...</p>
+                  <p class="card-text">Java can drive innovation, & improve application services;first programming language for IoT, enterprise architecture...</p>
                    <a href="{{route('bookstore')}}" class="btn btn-primary">View More</a>
                 </div>
               </div>

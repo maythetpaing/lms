@@ -20,9 +20,10 @@
 			</div>
 			<div class="form-group">
 				<label>Book</label>
-				<select name="book" class="form-control @error('book') is-invalid @enderror" id="book">
+				<select name="books[]" class="form-control @error('book') is-invalid @enderror" id="book" multiple="multiple" class="js-example-basic-multiple">
 					@foreach($books as $book)
 					<option value="{{$book->id}}">{{$book->name}}</option>
+					{{-- op --}}					
 					@endforeach
 					@error('book')
 					<div class="alert alert-danger">{{ $message }}</div>
@@ -52,4 +53,12 @@
 		</form>
 	</div>
 </div>
+@endsection
+@section('script')
+<script type="text/javascript">
+	$(document).ready(function() {
+    $('.js-example-basic-multiple').select2();
+});
+</script>
+
 @endsection

@@ -10,6 +10,12 @@
   <meta name="author" content="">
 
   <title>LMS Dashboard</title>
+  <script src="{{asset('backend/vendor/jquery/jquery.min.js')}}"></script>
+
+  <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
+  <script src="{{asset('backend/vendor/jquery/jquery.min.js')}}"></script>
+
   <link rel="icon" href="{{asset('backend/img/logo.png')}}" class="w-100 h-100">
 
   <!-- Custom fonts for this template-->
@@ -105,13 +111,13 @@
               <span>Subcategory</span></a>
             </li> --}}
 
-      
-         <li class="nav-item">
-          <a class="nav-link collapsed" href="{{route('issues.index')}}" aria-expanded="true" aria-controls="collapseUtilities">
-            <i class="fas fa-pager"></i>
-            <span>Issue / Return</span>
-          </a>
-        </li>
+
+            <li class="nav-item">
+              <a class="nav-link collapsed" href="{{route('issues.index')}}" aria-expanded="true" aria-controls="collapseUtilities">
+                <i class="fas fa-pager"></i>
+                <span>Issue / Return</span>
+              </a>
+            </li>
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
 
@@ -175,11 +181,11 @@
                   <!-- Nav Item - Alerts -->
                   <li class="nav-item dropdown no-arrow mx-1">
                     <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      
+
                     </a>
                     <!-- Dropdown - Alerts -->
                     <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="alertsDropdown">
-                      
+
                       <a class="dropdown-item d-flex align-items-center" href="#">
                         <div class="mr-3">
                           <div class="icon-circle bg-primary">
@@ -220,11 +226,11 @@
                   <!-- Nav Item - Messages -->
                   <li class="nav-item dropdown no-arrow mx-1">
                     <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      
+
                     </a>
                     <!-- Dropdown - Messages -->
                     <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="messagesDropdown">
-                      
+
                       <a class="dropdown-item d-flex align-items-center" href="#">
                         <div class="dropdown-list-image mr-3">
                           <img class="rounded-circle" src="https://source.unsplash.com/fn_BT9fwg_E/60x60" alt="">
@@ -273,10 +279,10 @@
 
                   <!-- Nav Item - User Information -->
                   <li class="nav-item dropdown no-arrow">
-                    
+
                     <!-- Dropdown - User Information -->
                     <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
-                      
+
                      {{--  <div class="dropdown-divider"></div>
                       <a class="dropdown-item" href="{{ route('logout') }}"
                       onclick="event.preventDefault();
@@ -338,7 +344,7 @@
         </div>
 
         <!-- Bootstrap core JavaScript-->
-        <script src="{{asset('backend/vendor/jquery/jquery.min.js')}}"></script>
+        
         <script src="{{asset('backend/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
 
         <!-- Core plugin JavaScript-->

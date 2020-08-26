@@ -32,7 +32,7 @@
 					<form method="post" action="{{route('issues.destroy',$issue->id)}}" onsubmit="return confirm('Are you sure?')" class="d-inline-block">
 						@csrf
 						@method('DELETE')
-						<input type="submit" name="btnsubmit" value="Delete" class="btn btn-danger">
+						<input type="submit" name="btnsubmit" value="Return" class="btn btn-danger">
 						
 					</form>
 					
