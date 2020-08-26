@@ -1,4 +1,4 @@
-@extends('frontendtemplate')
+{{-- @extends('frontendtemplate')
 
 @section('content')
 <div class="container">
@@ -75,3 +75,4 @@
     </div>
 </div>
 @endsection
+ --}}

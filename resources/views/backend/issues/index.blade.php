@@ -1,55 +1,92 @@
 @extends('backendtemplate')
 @section('content')
 <div class="container-fluid">
-	<h2>Issue (Form)</h2>
+	<h2 class="d-inline-block">Issue List(Table)</h2>
+	<a href="{{route('issues.create')}}" class="btn btn-success float-right">+ Add Issue</a>
+	<table class="table table-bordered">
+		<thead>
+			<tr>
+				<th>No</th>
+				<th>Member Name</th>
+				<th>Book Name</th>
+				<th>Issue Date</th>
+				<th>Due Date</th>
+				<th>Actions</th>
+			</tr>
+		</thead>
+		<tbody>
+			@php $i=1; @endphp
+			@foreach($issues as $issue)
+			<tr>
+				<td>{{$i++}}</td>
+				
+				<td>{{$issue->member->name}}</td>
+				<td>{{$issue->book->name}}</td>
+				<td>{{$issue->created_at}}</td>
+				<td>{{$issue->due_date}}</td>
+				
+				<td>
+				
+					{{-- <a href="#" class="btn btn-warning detail" data-name="{{$issue->name}}">
+					Detail</a> --}}
+					<form method="post" action="{{route('issues.destroy',$issue->id)}}" onsubmit="return confirm('Are you sure?')" class="d-inline-block">
+						@csrf
+						@method('DELETE')
+						<input type="submit" name="btnsubmit" value="Delete" class="btn btn-danger">
+						
+					</form>
+					
+				</td>
+			</tr>
+			@endforeach
+		</tbody>
+	</table>
+</div>
+{{-- detail modal --}}
+<div class="modal fade" tabindex="-1" id="mymodal">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title">Modal title</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				<div class="row">
+					<div class="col-md-12">		
+						Name:<strong id="name"></strong><br>
 
-	
-	<div class="offset-md-2 col-md-8">
-		<form enctype="multipart/form-data" method="post" action="{{route('issues.store')}}">
-			@csrf
-			<div class="form-group">
-				<label>Member</label>
-				<select name="member" class="form-control @error('member') is-invalid @enderror" id="member">
-					@foreach($members as $member)
-					<option value="{{$member->id}}">{{$member->name}}</option>
-					@endforeach
-					@error('member')
-					<div class="alert alert-danger">{{ $message }}</div>
-					@enderror
-				</select>
+					</div>
+				</div>
 			</div>
-			<div class="form-group">
-				<label>Book</label>
-				<select name="book" class="form-control @error('book') is-invalid @enderror" id="book">
-					@foreach($books as $book)
-					<option value="{{$book->id}}">{{$book->name}}</option>
-					@endforeach
-					@error('book')
-					<div class="alert alert-danger">{{ $message }}</div>
-					@enderror
-				</select>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+				<button type="button" class="btn btn-primary">Save changes</button>
 			</div>
-			<div class="form-group">
-				<label>Issue Date</label>
-				<input type="date" name="issuedate" class="form-control @error('issuedate') is-invalid @enderror" id="issuedate">
-				@error('issuedate')
-				<div class="alert alert-danger">{{ $message }}</div>
-				@enderror
-			</div>
-			<div class="form-group">
-				<label>Due Date</label>
-				<input type="date" name="duedate" class="form-control @error('duedate') is-invalid @enderror" id="duedate">
-				@error('duedate')
-				<div class="alert alert-danger">{{ $message }}</div>
-				@enderror
-			</div>
-			
-			
-			
-			<input type="submit" value="Issue" class="btn btn-outline-primary">
-
-
-		</form>
+		</div>
 	</div>
 </div>
+@endsection
+
+@section('script')
+<script type="text/javascript">
+	$(document).ready(function () {
+		$('.detail').click(function(){
+			// alert('box!');
+			var name=$(this).data('name');
+			var photo=$(this).data('photo');
+			var edition=$(this).data('edition');
+			var desc=$(this).data('desc');
+			$('.modal-title').text(name);
+			$('#name').text(name);
+			$('#photo').attr('src',photo);
+			$('#edition').text(edition);
+			$('#desc').text(desc);
+			$('#mymodal').modal('show');
+
+		});
+		//delete
+	})
+</script>
 @endsection

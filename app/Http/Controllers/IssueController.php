@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Book;
 use App\Member;
+use App\Issue;
 
 class IssueController extends Controller
 {
@@ -17,7 +18,8 @@ class IssueController extends Controller
     {
         $books=Book::all();
          $members=Member::all();
-        return view('backend.issues.index',compact('books','members'));
+         $issues=Issue::all();
+        return view('backend.issues.index',compact('books','members','issues'));
     }
 
     /**
@@ -27,7 +29,10 @@ class IssueController extends Controller
      */
     public function create()
     {
-        //
+        $members=Member::all();
+        // to retrieve data from category
+        $books=Book::all();
+        return view('backend.issues.create',compact('members','books'));
     }
 
     /**
@@ -38,7 +43,24 @@ class IssueController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // dd($request);
+          $request->validate([
+            'member'=>'required',
+            'book'=>'required',
+            'due_date'=>'required',
+
+
+        ]);
+        $issue=new Issue;
+         // $item->table-column=$request->form input type name;
+        $issue->member_id=$request->member;
+        $issue->book_id=$request->book;
+        $issue->due_date=$request->due_date;
+        $issue->save();
+        // dd($issue);
+        //redirect
+        return redirect()->route('issues.index');
+
     }
 
     /**
@@ -83,6 +105,9 @@ class IssueController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $issue =Issue::find($id);
+        $issue->delete();
+        // redirect
+        return redirect()->route('issues.index');
     }
 }

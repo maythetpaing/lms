@@ -55,7 +55,7 @@ class LoginController extends Controller
         //         # code...
         //         break;
        
-             switch ($roles[1]) {
+             switch ($roles[0]) {
                 case 'admin':
             return redirect('dashboard');
             default:

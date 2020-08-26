@@ -11,13 +11,15 @@ class FrontendController extends Controller
     {
     	return view('frontend.home');
     }
-    
-    public function login($value=''){
-    	return view('frontend.login');
-	}
-	 public function register($value=''){
-    	return view('frontend.register');
-	}
+     public function login($value='')
+    {
+        return view('frontend.login');
+    }
+
+     public function register($value='')
+    {
+        return view('frontend.register');
+    }
     public function about($value=''){
         return view('frontend.about');
     }

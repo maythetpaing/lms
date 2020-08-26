@@ -29,7 +29,7 @@ Route::get('bookstore','FrontendController@bookstore')->name('bookstore');
 
 Route::middleware('role:admin')->group(function () {
 
-Route::get('dashboard','BackendController@dashboard')->name('dashboard');
+Route::get('/dashboard','BackendController@dashboard')->name('dashboard');
 Route::resource('authors','AuthorController');
 Route::resource('categories','CategoryController');
 Route::resource('books','BookController');

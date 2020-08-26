@@ -73,7 +73,7 @@
          <li class="nav-item">
           <a class="nav-link collapsed" href="{{route('issues.index')}}" aria-expanded="true" aria-controls="collapseUtilities">
             <i class="fas fa-pager"></i>
-            <span>Issue</span>
+            <span>Issue / Return</span>
           </a>
         </li>
         <!-- Divider -->
