@@ -20,7 +20,8 @@
 			</div>
 			<div class="form-group">
 				<label>Book</label>
-				<select name="books[]" class="form-control @error('book') is-invalid @enderror" id="book" multiple="multiple" class="js-example-basic-multiple">
+					<select name="books[]" class="select form-control @error('book') is-invalid @enderror" id="book" multiple="multiple">
+
 					@foreach($books as $book)
 					<option value="{{$book->id}}">{{$book->name}}</option>
 					{{-- op --}}					
@@ -30,13 +31,13 @@
 					@enderror
 				</select>
 			</div>
-			{{-- <div class="form-group">
+			<div class="form-group">
 				<label>Issue Date</label>
 				<input type="date" name="issuedate" class="form-control @error('issuedate') is-invalid @enderror" id="issuedate">
 				@error('issuedate')
 				<div class="alert alert-danger">{{ $message }}</div>
 				@enderror
-			</div> --}}
+			</div>
 			<div class="form-group">
 				<label>Due Date</label>
 				<input type="date" name="due_date" class="form-control @error('due_date') is-invalid @enderror" id="due_date">
@@ -56,9 +57,9 @@
 @endsection
 @section('script')
 <script type="text/javascript">
-	$(document).ready(function() {
-    $('.js-example-basic-multiple').select2();
+
+$(document).ready(function() {
+    $('.select').select2();
 });
 </script>
-
 @endsection

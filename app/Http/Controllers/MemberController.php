@@ -48,8 +48,6 @@ class MemberController extends Controller
         //
         
 
-       
-
         // Data insert
         $member = new Member;
         $member->name = $request->name;
@@ -65,6 +63,8 @@ class MemberController extends Controller
         }
         return "Successfully";
 
+
+        
 
         // Redirect
         // return redirect()->route('members.index');

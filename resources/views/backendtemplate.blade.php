@@ -10,13 +10,12 @@
   <meta name="author" content="">
 
   <title>LMS Dashboard</title>
+
   <script src="{{asset('backend/vendor/jquery/jquery.min.js')}}"></script>
 
   <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
   <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
-  <script src="{{asset('backend/vendor/jquery/jquery.min.js')}}"></script>
-
-  <link rel="icon" href="{{asset('backend/img/logo.png')}}" class="w-100 h-100">
+   <link rel="icon" href="{{asset('backend/img/logo.png')}}" class="w-100 h-100">
 
   <!-- Custom fonts for this template-->
   <link href="{{asset('backend/vendor/fontawesome-free/css/all.min.css')}}" rel="stylesheet" type="text/css">
@@ -62,6 +61,18 @@
       </div>
 
       <!-- Nav Item - Pages Collapse Menu -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="{{route('issues.create')}}" aria-expanded="true" aria-controls="collapseUtilities">
+          <i class="fas fa-pager"></i>
+          <span>+Add Issue</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="{{route('issues.index')}}" aria-expanded="true" aria-controls="collapseUtilities">
+          <i class="fas fa-pager"></i>
+          <span>Issue / Return</span>
+        </a>
+      </li>
       <li class="nav-item">
         <a class="nav-link collapsed" href="{{route('books.index')}}" aria-expanded="true" aria-controls="collapseTwo">
           <i class="fas fa-book"></i>
@@ -112,12 +123,16 @@
             </li> --}}
 
 
+
             <li class="nav-item">
               <a class="nav-link collapsed" href="{{route('issues.index')}}" aria-expanded="true" aria-controls="collapseUtilities">
                 <i class="fas fa-pager"></i>
                 <span>Issue / Return</span>
               </a>
             </li>
+
+
+
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
 
@@ -344,7 +359,7 @@
         </div>
 
         <!-- Bootstrap core JavaScript-->
-        
+
         <script src="{{asset('backend/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
 
         <!-- Core plugin JavaScript-->
