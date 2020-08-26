@@ -3,7 +3,7 @@
 <!DOCTYPE HTML>
 <!--
 	Caminar by TEMPLATED
-	templated.co @templatedco
+	templated.co 
 	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
 -->
 <html>
@@ -14,6 +14,7 @@
 	<link rel="stylesheet" href="{{asset('backend/css/main.css')}}" />
 </head>
 <body style="background-image: url({{asset('backend/img/l1.jpg')}});">
+	<div class="container-fluid">
 
 	<!-- Header -->
 	
@@ -101,6 +102,7 @@
 
 		</div>
 	</section>
+	</div>
 
 	
 			 <!-- <script src="assets/js/jquery.min.js"></script>

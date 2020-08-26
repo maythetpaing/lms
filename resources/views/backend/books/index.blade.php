@@ -41,7 +41,13 @@
 			<td>{{$book->noc}}</td>
 			<td>{{$book->edition}}</td>
 			<td>
+
+				<a href="#" class="btn btn-success issue">
+					{{-- <i class="far fa-edit"></i> --}}
+
+				Add Issue</a>
 				</form>	
+
 				<a href="{{route('books.edit',$book->id)}}" class="btn btn-warning">
 					{{-- <i class="far fa-edit"></i> --}}
 				Edit</a>

@@ -13,7 +13,9 @@ class Member extends Model
         //             	->withPivot('fee','status','due_date')
         // 				->withTimestamps();
         // }
-     public function issues(){
-      return $this->hasMany('App\Issue');
-    }
+   
+    public function issues($value=''){
+        	return $this->hasMany('App\Issue');
+        }
+
 }

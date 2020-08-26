@@ -3,11 +3,18 @@
 
 		
 
-		<div class="container-fluid">
+		<div class="container-fluid bg-light">
 		<!-- Top Navigation -->
+		<h2 id="resize-effect" class="mt-5 text-center bg-light">
+  <span aria-hidden="true">
+    <span>Welcome</span>
+    <span>to </span>
+    <span>Library</span>
+  </span>
+</h2>
 		<div class="row">
 			@foreach($books as $book)
-			<div class="col-md-6 col-sm-12">
+			<div class="col-md-4 col-sm-6">
 			<ul class="align">
 				<li>
 					<figure class='book'>
@@ -53,10 +60,10 @@
 					<ul>
 							<li>
 						
-							<h3>{{$book->name}}</h3>
-							<span>By*{{$book->author->name}}</span>
-							<span>{{$book->category->name}}</span>
-							<p>{{$book->desciption}}</p>
+							<h3 style="color: #23A38F;">{{$book->name}}</h3>
+							<span  style="color: #23A38F;">Written By->{{$book->author->name}}</span><br>
+							<span  style="color: #23A38F;">{{$book->category->name}}</span>
+							<p  style="color: white;">{{$book->desciption}}</p>
 						
 					</li>
 					</ul>

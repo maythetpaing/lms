@@ -27,33 +27,83 @@
   <div id="wrapper">
 
     <!-- Sidebar -->
-    <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+    <ul class="navbar-nav sidebar sidebar-dark accordion" id="accordionSidebar" style="background-color: #23A38F;">
 
       <!-- Sidebar - Brand -->
-      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="#" class="bg-secondary">
         <div class="sidebar-brand-icon">
          <i class="fas fa-user"></i>
-        </div>
-        <div class="sidebar-brand-text mx-3">Librarian </div>
-      </a>
+       </div>
+       <div class="sidebar-brand-text mx-3">Librarian </div>
+     </a>
+
+     <!-- Divider -->
+     <hr class="sidebar-divider my-0">
+
+     <!-- Nav Item - Dashboard -->
+     <li class="nav-item active">
+      <a class="nav-link" href="{{route('dashboard')}}">
+        <i class="far fa-clipboard"></i>
+        <span>Library Report</span></a>
+      </li>
 
       <!-- Divider -->
-      <hr class="sidebar-divider my-0">
+      <hr class="sidebar-divider">
 
-      <!-- Nav Item - Dashboard -->
-      <li class="nav-item active">
-        <a class="nav-link" href="{{route('dashboard')}}">
-          <i class="far fa-clipboard"></i>
-          <span>Library Report</span></a>
-        </li>
+      <!-- Heading -->
+      <div class="sidebar-heading">
+        Interface
+      </div>
 
-        <!-- Divider -->
-        <hr class="sidebar-divider">
+      <!-- Nav Item - Pages Collapse Menu -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="{{route('books.index')}}" aria-expanded="true" aria-controls="collapseTwo">
+          <i class="fas fa-book"></i>
+          <span>Books</span>
+        </a>
+      </li>
 
-        <!-- Heading -->
-        <div class="sidebar-heading">
-          Interface
-        </div>
+
+
+      
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="{{route('members.index')}}" aria-expanded="true" aria-controls="collapseUtilities">
+          <i class="fas fa-pager"></i>
+          <span>Member</span>
+        </a>
+      </li>
+
+      <!-- Divider -->
+      <hr class="sidebar-divider">
+
+      <!-- Heading -->
+      <div class="sidebar-heading">
+        Setting
+      </div>
+
+      <!-- Nav Item - Pages Collapse Menu -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="{{route('authors.index')}}" aria-expanded="true" aria-controls="collapsePages">
+         <i class="fas fa-user-friends"></i>
+         <span>Author</span>
+       </a>
+     </li>
+
+     <!-- Nav Item - Charts -->
+     <li class="nav-item">
+      <a class="nav-link" href="{{route('categories.index')}}">
+        {{-- <i class="fas fa-fw fa-chart-area"></i> --}}
+        <i class="fas fa-fw fa-folder"></i>
+        <span>Category</span></a>
+      </li>
+
+      <!-- Nav Item - Tables -->
+          {{-- li class="nav-item">
+          <a class="nav-link" href="#"> --}}
+            {{-- <i class="fas fa-fw fa-table"></i> --}}
+            {{--   <i class="fas fa-fw fa-folder"></i>
+              <span>Subcategory</span></a>
+            </li> --}}
 
         <!-- Nav Item - Pages Collapse Menu -->
         <li class="nav-item">
@@ -151,8 +201,8 @@
                         <div class="input-group">
                           <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
                           <div class="input-group-append">
-                            <button class="btn btn-primary" type="button">
-                              <i class="fas fa-search fa-sm"></i>
+                            <button class="btn btn-success" type="button">
+                              <i class="fas fa-search fa-sm"style="color: #23A38F;"></i>
                             </button>
                           </div>
                         </div>
@@ -163,15 +213,11 @@
                   <!-- Nav Item - Alerts -->
                   <li class="nav-item dropdown no-arrow mx-1">
                     <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      <i class="fas fa-bell fa-fw"></i>
-                      <!-- Counter - Alerts -->
-                      <span class="badge badge-danger badge-counter">3+</span>
+                      
                     </a>
                     <!-- Dropdown - Alerts -->
                     <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="alertsDropdown">
-                      <h6 class="dropdown-header">
-                        Alerts Center
-                      </h6>
+                      
                       <a class="dropdown-item d-flex align-items-center" href="#">
                         <div class="mr-3">
                           <div class="icon-circle bg-primary">
@@ -205,22 +251,18 @@
                           Spending Alert: We've noticed unusually high spending for your account.
                         </div>
                       </a>
-                      <a class="dropdown-item text-center small text-gray-500" href="#">Show All Alerts</a>
+                      
                     </div>
                   </li>
 
                   <!-- Nav Item - Messages -->
                   <li class="nav-item dropdown no-arrow mx-1">
                     <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      <i class="fas fa-envelope fa-fw"></i>
-                      <!-- Counter - Messages -->
-                      <span class="badge badge-danger badge-counter">7</span>
+                      
                     </a>
                     <!-- Dropdown - Messages -->
                     <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="messagesDropdown">
-                      <h6 class="dropdown-header">
-                        Message Center
-                      </h6>
+                      
                       <a class="dropdown-item d-flex align-items-center" href="#">
                         <div class="dropdown-list-image mr-3">
                           <img class="rounded-circle" src="https://source.unsplash.com/fn_BT9fwg_E/60x60" alt="">
@@ -269,24 +311,10 @@
 
                   <!-- Nav Item - User Information -->
                   <li class="nav-item dropdown no-arrow">
-                    <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      <span class="mr-2 d-none d-lg-inline text-gray-600 small">Valerie Luna</span>
-                      <img class="img-profile rounded-circle" src="https://source.unsplash.com/QAB-WJcbgJk/60x60">
-                    </a>
+                    
                     <!-- Dropdown - User Information -->
                     <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
-                      <a class="dropdown-item" href="#">
-                        <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-                        Profile
-                      </a>
-                      <a class="dropdown-item" href="#">
-                        <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
-                        Settings
-                      </a>
-                      <a class="dropdown-item" href="#">
-                        <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
-                        Activity Log
-                      </a>
+                      
                      {{--  <div class="dropdown-divider"></div>
                       <a class="dropdown-item" href="{{ route('logout') }}"
                       onclick="event.preventDefault();
