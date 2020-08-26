@@ -142,20 +142,12 @@ class IssueController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
+    
     {
-<<<<<<< HEAD
-        $issue =Issue::find($id);
-        $issue->delete();
-        // redirect
-        return redirect()->route('issues.index');
-=======
-
         $issue=Issue::find($id);
         $issue->delete();
         //redirect
         return redirect()->route('issue.index');
 
-        //
->>>>>>> 725026efffaa607324b98fbb69840947c0a5c575
     }
 }

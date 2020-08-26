@@ -105,51 +105,13 @@
               <span>Subcategory</span></a>
             </li> --}}
 
-        <!-- Nav Item - Pages Collapse Menu -->
-        <li class="nav-item">
-          <a class="nav-link collapsed" href="{{route('books.index')}}" aria-expanded="true" aria-controls="collapseTwo">
-            <i class="fas fa-book"></i>
-            <span>Books</span>
-          </a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link collapsed" href="{{route('members.index')}}" aria-expanded="true" aria-controls="collapseUtilities">
-            <i class="fas fa-pager"></i>
-            <span>Member</span>
-          </a>
-        </li>
-
+      
          <li class="nav-item">
           <a class="nav-link collapsed" href="{{route('issues.index')}}" aria-expanded="true" aria-controls="collapseUtilities">
             <i class="fas fa-pager"></i>
             <span>Issue / Return</span>
           </a>
         </li>
-        <!-- Divider -->
-        <hr class="sidebar-divider">
-
-        <!-- Heading -->
-        <div class="sidebar-heading">
-          Setting
-        </div>
-
-        <!-- Nav Item - Pages Collapse Menu -->
-        <li class="nav-item">
-          <a class="nav-link collapsed" href="{{route('authors.index')}}" aria-expanded="true" aria-controls="collapsePages">
-           <i class="fas fa-user-friends"></i>
-            <span>Author</span>
-          </a>
-        </li>
-
-        <!-- Nav Item - Charts -->
-        <li class="nav-item">
-          <a class="nav-link" href="{{route('categories.index')}}">
-            {{-- <i class="fas fa-fw fa-chart-area"></i> --}}
-            <i class="fas fa-fw fa-folder"></i>
-            <span>Category</span></a>
-          </li>
-
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
 
