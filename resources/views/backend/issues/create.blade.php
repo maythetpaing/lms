@@ -1,7 +1,7 @@
 @extends('backendtemplate')
 @section('content')
 <div class="container-fluid">
-	<h2>Issue (Form)</h2>
+	<h2>Issue Create(Form)</h2>
 
 	
 	<div class="offset-md-2 col-md-8">
@@ -46,11 +46,7 @@
 				@enderror
 			</div>
 
-			
-			
-			<input type="submit" value="Issue" class="btn btn-outline-primary">
-
-
+			<input type="submit" value="Issue" class="issue btn btn-outline-primary">
 		</form>
 	</div>
 </div>
@@ -60,6 +56,14 @@
 
 $(document).ready(function() {
     $('.select').select2();
+});
+</script>
+<script type="text/javascript">
+$(document).ready(function() {
+    $('.issue').click(function(){
+    	// alert('hi');
+    	
+    });
 });
 </script>
 @endsection

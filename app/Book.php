@@ -21,9 +21,6 @@ class Book extends Model
     // public function issues($value=''){
     //     	return $this->belongsToMany('App\Issue','issue_detail')->withPivot('fee','status','due_date')->withTimestamps();
     //     }
-
-     
-
         public function members($value=''){
             return $this->belongsToMany('App\Member','issue_detail')
                         ->withPivot('fee','status','due_date') 
