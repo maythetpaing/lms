@@ -29,6 +29,7 @@
 
   <!-- Custom styles for this template -->
   <link href="{{asset('frontend/css/shop-homepage.css')}}" rel="stylesheet">
+  <link href="{{asset('backend/css/sb-admin-2.css')}}" rel="stylesheet">
  
 
 </head>

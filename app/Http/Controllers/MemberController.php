@@ -46,6 +46,7 @@ class MemberController extends Controller
             'edulevel'=>'required',
         ]);
         //
+        
 
        
 
