@@ -3,11 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+
 use App\Issue;
 use App\Book;
 use App\Member;
-
-
 class IssueController extends Controller
 {
     /**
@@ -17,8 +16,10 @@ class IssueController extends Controller
      */
     public function index()
     {
-         $issues=Issue::all();
-         return view('backend.issues.index',compact('issues'));
+       
+        $books=Book::all();
+         $members=Member::all();
+        return view('backend.issues.index',compact('books','members'));
     }
 
     /**
@@ -28,11 +29,13 @@ class IssueController extends Controller
      */
     public function create()
     {
+
         $books=Book::all();
         // to retrieve data from category
         $members=Member::all();
         return view('backend.issues.create',compact('books','members'));
         
+
     }
 
     /**
@@ -43,7 +46,7 @@ class IssueController extends Controller
      */
     public function store(Request $request)
     {
-         // dd($request->notes);
+
 
        $request->validate([
             'member'=>'required',
@@ -65,6 +68,7 @@ class IssueController extends Controller
      
         $issue->save(); 
          return redirect()->route('issues.index');
+
     }
 
     /**
@@ -78,6 +82,9 @@ class IssueController extends Controller
          $issue = Issue::find($id);
         // dd($book);
         return view('backend.issues.show',compact('issue'));
+
+        //
+
     }
 
     /**
@@ -93,6 +100,7 @@ class IssueController extends Controller
         $members=Member::all();
         $issue =Issue::find($id);
         return view('backend.issues.edit',compact('books','members','issue'));
+
     }
 
     /**
@@ -104,6 +112,7 @@ class IssueController extends Controller
      */
     public function update(Request $request, $id)
     {
+
          $request->validate([
             'member'=>'required',
             'book'=>'required',
@@ -126,6 +135,7 @@ class IssueController extends Controller
      
         $issue->save(); 
          return redirect()->route('issues.index');
+
     }
 
     /**
@@ -136,9 +146,12 @@ class IssueController extends Controller
      */
     public function destroy($id)
     {
+
         $issue=Issue::find($id);
         $issue->delete();
         //redirect
         return redirect()->route('issue.index');
+
+        //
     }
 }
