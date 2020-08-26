@@ -139,15 +139,15 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-md-4 col-sm-12 py-2">
+    <div class="col-md-4 col-sm-12 py-2" style="color: black;">
       <h1 class="text-center">Hello</h1>
       <p>The basic functions of library management include, but are not limited to: planning and negotiating the acquisition of materials, Interlibrary Loan (ILL) requests, stacks maintenance, overseeing fee collection, event planning, fundraising, and human resources.</p>
     </div>
-    <div class="col-md-4 col-sm-12  py-2">
+    <div class="col-md-4 col-sm-12  py-2" style="color: black;">
       <h1 class="text-center">Wellcome to</h1>
       <p>Most of the libraries that store physical media like books, periodicals, film, and other objects adhere to some derivative of the Dewey Decimal System as their method for tagging, storing, and retrieving materials based on unique identifiers.</p>
     </div>
-    <div class="col-md-4 col-sm-12 py-2">
+    <div class="col-md-4 col-sm-12 py-2" style="color: black;">
       <h1 class="text-center">Our library</h1>
       <p>The use of such systems have caused librarians to develop and leverage common constructs that act as tools for both library professionals and library users alike. These constructs include master catalogs, domain catalogs, indexes, unique identifiers, unique identifier tokens, and artifacts .</p>
     </div>

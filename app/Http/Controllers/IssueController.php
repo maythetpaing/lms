@@ -44,7 +44,8 @@ class IssueController extends Controller
      */
     public function store(Request $request)
     {     
-        // dd($id);
+
+         
         $id=$request->member;
 
         $member = Member::find($id);
@@ -70,6 +71,7 @@ class IssueController extends Controller
         }
 
         return view('backend.issues.show');
+
     }
 
     /**

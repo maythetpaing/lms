@@ -20,9 +20,11 @@
 			</div>
 			<div class="form-group">
 				<label>Book</label>
-				<select name="books[]" class="select form-control @error('book') is-invalid @enderror" id="book" multiple="multiple">
+					<select name="books[]" class="select form-control @error('book') is-invalid @enderror" id="book" multiple="multiple">
+
 					@foreach($books as $book)
 					<option value="{{$book->id}}">{{$book->name}}</option>
+					{{-- op --}}					
 					@endforeach
 					@error('book')
 					<div class="alert alert-danger">{{ $message }}</div>
@@ -51,6 +53,7 @@
 @endsection
 @section('script')
 <script type="text/javascript">
+
 $(document).ready(function() {
     $('.select').select2();
 });

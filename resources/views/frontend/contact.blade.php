@@ -6,7 +6,7 @@
       
         <p class="form1 font">Warmly Welcome to Our website</p>
         <br>
-        <span class="text-justify"><i class="fas fa-arrows-alt"></i></i>
+        <span class="text-justify"><i class="fas fa-envelope-square"></i>
       librarymit@gmail.com</span>
       </a>
     </div>
