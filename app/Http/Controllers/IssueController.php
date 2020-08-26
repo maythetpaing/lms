@@ -3,8 +3,6 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
-use App\Issue;
 use App\Book;
 use App\Member;
 
@@ -20,8 +18,7 @@ class IssueController extends Controller
        
         $books=Book::all();
          $members=Member::all();
-         $issues=Issue::all();
-        return view('backend.issues.index',compact('books','members','issues'));
+        return view('backend.issues.index',compact('books','members'));
     }
 
     /**
@@ -47,24 +44,35 @@ class IssueController extends Controller
      */
     public function store(Request $request)
     {     
-           $request->validate([
-            'member'=>'required',
-            'book'=>'required',
-            'issue_date'=>'required',
-            'due_date'=>'required',
-            // 'status'=>'required',
+        // dd($id);
+        $id=$request->member;
 
-        ]);
-       // dd($request);
-        //data insert
-        $issue=new Issue;
-        
-        $issue->issue_date=$request->issue_date;
-        $issue->due_date=$request->due_date;
-        $issue->status=$request->status;
-     
-        $issue->save(); 
-         return redirect()->route('issues.index');
+        $member = Member::find($id);
+
+        // dd($member);
+        $member_id=$request->member;
+        $book_id=$request->books;
+        $due_date=$request->due_date;
+        $issue_date=$request->issuedate;
+        $fee=0;
+        $status=0;
+
+        // dd($book_id);
+
+        // //save into issue_detail
+
+        // foreach ($request as $row) {
+        //    $member->books()->attach($book_id,['due_date'=>$row->due_date],['status'=>$row->status],['fee'=>$row->fee]);
+        // }
+        // for ($i=0;i<count($book);$i++){
+        //     $member->books()->attach($book[$i]);
+        // }
+        foreach ($book_id as $value) {
+            $member->books()->attach($value,['issue_date'=>$issue_date,'due_date'=>$due_date,'status'=>$status,'fee'=>$fee]);
+            
+        }
+
+        return 'successful!';
 
     }
 
@@ -110,28 +118,28 @@ class IssueController extends Controller
     public function update(Request $request, $id)
     {
 
-         $request->validate([
-            'member'=>'required',
-            'book'=>'required',
-            'issue_date'=>'required',
-            'due_date'=>'required',
-            'fee'=>'required',
-            // 'status'=>'required',
+        //  $request->validate([
+        //     'member'=>'required',
+        //     'book'=>'required',
+        //     'issue_date'=>'required',
+        //     'due_date'=>'required',
+        //     'fee'=>'required',
+        //     // 'status'=>'required',
 
-        ]);
+        // ]);
 
-         //data insert
-        $issue=Issue::find($id);
-         // $item->table-column=$request->form input type name;
-        $issue->member_id=$request->member;
-        $issue->book_id=$request->book;
-        $issue->issue_date=$request->issue_date;
-        $issue->due_date=$request->due_date;
-        $issue->fee=$request->fee;
-        // $issue->status=$request->status;
+        //  //data insert
+        // $issue=Issue::find($id);
+        //  // $item->table-column=$request->form input type name;
+        // $issue->member_id=$request->member;
+        // $issue->book_id=$request->book;
+        // $issue->issue_date=$request->issue_date;
+        // $issue->due_date=$request->due_date;
+        // $issue->fee=$request->fee;
+        // // $issue->status=$request->status;
      
-        $issue->save(); 
-         return redirect()->route('issues.index');
+        // $issue->save(); 
+        //  return redirect()->route('issues.index');
 
     }
 
@@ -144,10 +152,10 @@ class IssueController extends Controller
     public function destroy($id)
     
     {
-        $issue=Issue::find($id);
-        $issue->delete();
-        //redirect
-        return redirect()->route('issue.index');
+        // $issue=Issue::find($id);
+        // $issue->delete();
+        // //redirect
+        // return redirect()->route('issue.index');
 
     }
 }

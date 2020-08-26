@@ -48,8 +48,6 @@ class MemberController extends Controller
         //
         
 
-       
-
         // Data insert
         $member = new Member;
         $member->name = $request->name;
@@ -59,6 +57,8 @@ class MemberController extends Controller
         $member->edulevel = $request->edulevel;
 
         $member->save();
+
+        
 
         // Redirect
         return redirect()->route('members.index');
