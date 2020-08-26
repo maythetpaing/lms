@@ -161,7 +161,7 @@
                 <div class="card-body">
                   <h4 class="card-title">PHP</h4>
                   <p class="card-text">PHP is a popular general-purpose scripting language that is especially suited to web development. </p>
-                  <a class="btn btn-primary">Button</a>
+                  <a href="{{route('bookstore')}}" class="btn btn-primary">View More</a>
                 </div>
               </div>
             </div>
