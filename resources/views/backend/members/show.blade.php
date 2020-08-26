@@ -23,9 +23,9 @@
 							@foreach($member->books as $member1)
 							<tr>
 								<td>{{$member->name}}</td>
-								<td>{{$member1->name}}</td>
+								{{-- <td>{{$member1->name}}</td>
 								<td>{{$member1->price}}</td>
-								<td>{{$member1->pivot->fee}}</td>
+								<td>{{$member1->pivot->fee}}</td> --}}
 								{{-- <td>{{$member1->pivot->create_at}}</td> --}}
 							</tr>
 							@endforeach

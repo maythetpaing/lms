@@ -16,15 +16,15 @@ $(document).ready(function(){
 
 	// Add To Cart
 	$(".issue").on('click',function(){
-		var item_qty=parseInt($('#qty').val());
+		// var item_qty=parseInt($('#qty').val());
 		var id = $(this).data('id');
 		var name = $(this).data('name');
-		var photo = $(this).data('photo');
-		var price = $(this).data('price');
-		var discount = $(this).data('discount');
-		var qty=1;
+		// var photo = $(this).data('photo');
+		// var price = $(this).data('price');
+		// var discount = $(this).data('discount');
+		var noc;
 		if (item_qty) {
-			qty+=item_qty;
+			noc-=noc;
 		}
 
 		var shop_item = {
@@ -67,7 +67,7 @@ $(document).ready(function(){
 
 	});
 
-	Show to Table Data
+	// Show to Table Data
 	function getData(){
 		var shopString = localStorage.getItem("heinshop");
 		if (shopString) {

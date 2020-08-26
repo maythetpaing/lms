@@ -79,7 +79,7 @@ class MemberController extends Controller
     public function show($id)
     {
          $member = Member::find($id);
-        //dd($item);
+        // dd($item);
         return view('backend.members.show',compact('member'));
     }
 
