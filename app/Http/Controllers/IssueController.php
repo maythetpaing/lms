@@ -16,9 +16,9 @@ class IssueController extends Controller
     public function index()
     {
        
-        $books=Book::all();
          $members=Member::all();
-        return view('backend.issues.index',compact('books','members'));
+         // dd($members[0]->books[0]->pivot->due_date);
+        return view('backend.issues.index',compact('members'));
     }
 
     /**
@@ -64,16 +64,12 @@ class IssueController extends Controller
         // foreach ($request as $row) {
         //    $member->books()->attach($book_id,['due_date'=>$row->due_date],['status'=>$row->status],['fee'=>$row->fee]);
         // }
-        // for ($i=0;i<count($book);$i++){
-        //     $member->books()->attach($book[$i]);
-        // }
         foreach ($book_id as $value) {
             $member->books()->attach($value,['issue_date'=>$issue_date,'due_date'=>$due_date,'status'=>$status,'fee'=>$fee]);
             
         }
 
-        return 'successful!';
-
+        return view('backend.issues.show');
     }
 
     /**
@@ -82,11 +78,12 @@ class IssueController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
-    {
-         $issue = Issue::find($id);
-        // dd($book);
-        return view('backend.issues.show',compact('issue'));
+     function show($id)
+    {   
+        // dd($id);
+         $member = Member::find($id);
+        // dd($member);
+        return view('backend.issues.show',compact('member'));
 
         //
 
