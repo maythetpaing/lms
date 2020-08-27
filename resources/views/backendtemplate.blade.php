@@ -120,23 +120,13 @@
         <span>Category</span></a>
       </li>
 
-      <!-- Nav Item - Tables -->
-          {{-- li class="nav-item">
-          <a class="nav-link" href="#"> --}}
-            {{-- <i class="fas fa-fw fa-table"></i> --}}
-            {{--   <i class="fas fa-fw fa-folder"></i>
-              <span>Subcategory</span></a>
-            </li> --}}
-
-
-
-            <li class="nav-item">
+          {{--   <li class="nav-item">
               <a class="nav-link collapsed" href="{{route('issues.index')}}" aria-expanded="true" aria-controls="collapseUtilities">
                 <i class="fas fa-pager"></i>
                 <span>Issue / Return</span>
               </a>
             </li>
-
+ --}}
 
 
             <!-- Divider -->

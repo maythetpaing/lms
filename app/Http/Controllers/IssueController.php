@@ -45,7 +45,7 @@ class IssueController extends Controller
     public function store(Request $request)
     {     
 
-         
+         // dd($request);
         $id=$request->member;
 
         $member = Member::find($id);
@@ -62,15 +62,12 @@ class IssueController extends Controller
 
         // //save into issue_detail
 
-        // foreach ($request as $row) {
-        //    $member->books()->attach($book_id,['due_date'=>$row->due_date],['status'=>$row->status],['fee'=>$row->fee]);
-        // }
         foreach ($book_id as $value) {
             $member->books()->attach($value,['issue_date'=>$issue_date,'due_date'=>$due_date,'status'=>$status,'fee'=>$fee]);
             
         }
 
-        return view('backend.issues.show');
+        return redirect()->route('issues.index');
 
     }
 
@@ -83,12 +80,9 @@ class IssueController extends Controller
      function show($id)
     {   
         // dd($id);
-         $member = Member::find($id);
+         // $member = Member::find($id);
         // dd($member);
-        return view('backend.issues.show',compact('member'));
-
-        //
-
+        // return view('backend.issues.show',compact('member'));
     }
 
     /**
@@ -117,28 +111,6 @@ class IssueController extends Controller
     public function update(Request $request, $id)
     {
 
-        //  $request->validate([
-        //     'member'=>'required',
-        //     'book'=>'required',
-        //     'issue_date'=>'required',
-        //     'due_date'=>'required',
-        //     'fee'=>'required',
-        //     // 'status'=>'required',
-
-        // ]);
-
-        //  //data insert
-        // $issue=Issue::find($id);
-        //  // $item->table-column=$request->form input type name;
-        // $issue->member_id=$request->member;
-        // $issue->book_id=$request->book;
-        // $issue->issue_date=$request->issue_date;
-        // $issue->due_date=$request->due_date;
-        // $issue->fee=$request->fee;
-        // // $issue->status=$request->status;
-     
-        // $issue->save(); 
-        //  return redirect()->route('issues.index');
 
     }
 
@@ -151,10 +123,6 @@ class IssueController extends Controller
     public function destroy($id)
     
     {
-        // $issue=Issue::find($id);
-        // $issue->delete();
-        // //redirect
-        // return redirect()->route('issue.index');
-
+        
     }
 }

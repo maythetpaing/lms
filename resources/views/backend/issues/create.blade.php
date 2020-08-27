@@ -62,6 +62,16 @@ $(document).ready(function() {
 $(document).ready(function() {
     $('.issue').click(function(){
     	// alert('hi');
+    	var name=$(this).data('name');
+		var photo=$(this).data('photo');
+		var edition=$(this).data('edition');
+		var desc=$(this).data('desc');
+		$('.modal-title').text(name);
+		$('#name').text(name);
+		$('#photo').attr('src',photo);
+		$('#edition').text(edition);
+		$('#desc').text(desc);
+		$('#mymodal').modal('show');
     	
     });
 });
