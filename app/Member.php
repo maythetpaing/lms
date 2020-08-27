@@ -9,7 +9,7 @@ class Member extends Model
     ];
      public function books($value=''){
         	return $this->belongsToMany('App\Book','issue_detail')	
-                    	->withPivot('fee','status','due_date')
+                    	->withPivot('fee','status','issue_date','due_date')
         				->withTimestamps();
         }
    

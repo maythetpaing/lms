@@ -29,7 +29,29 @@ class FrontendController extends Controller
    public function bookstore($value='')
     {
         $books=Book::all();
-        // dd($items);
-        return view('frontend.bookstore',compact('books'));
+        $book_str='';
+        foreach ($books as $book) {   
+            foreach ($book->members as $value) {
+                if ($value->pivot->status==0) {
+                
+                    $book_str.=$value->pivot->book_id.",";
+                }
+            }
+    }
+    // echo $book_str;
+    $arr=explode(',', $book_str);
+    $book_count = array_count_values($arr);
+    // return $book_count;
+   
+
+
+
+
+        // dd($books);
+        // foreach ($books as $value) {
+        //     $book_piv=$value;
+        // }
+        // dd($book_piv);
+        return view('frontend.bookstore',compact('books','book_count'));
     }
 }

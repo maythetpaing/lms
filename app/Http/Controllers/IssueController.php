@@ -15,11 +15,15 @@ class IssueController extends Controller
      */
     public function index()
     {
-       
-         $members=Member::all();
+
+       $members=Member::all();
+        // foreach ($books as $value) {
+        //     $book_piv=$value;
+        // }
+        // dd($book_piv);
          // dd($members[0]->books[0]->pivot->due_date);
-        return view('backend.issues.index',compact('members'));
-    }
+       return view('backend.issues.index',compact('members'));
+   }
 
     /**
      * Show the form for creating a new resource.
@@ -30,9 +34,24 @@ class IssueController extends Controller
     {
 
         $books=Book::all();
+        $book_str='';
+        foreach ($books as $book) {   
+            foreach ($book->members as $value) {
+                if ($value->pivot->status==0) {
+                
+                    $book_str.=$value->pivot->book_id.",";
+                }
+            }
+        }
+        // echo $book_str;
+        $arr=explode(',', $book_str);
+        $book_count = array_count_values($arr);
+        // return $book_count;
+
+// 
         // to retrieve data from category
         $members=Member::all();
-        return view('backend.issues.create',compact('books','members'));
+        return view('backend.issues.create',compact('books','members','book_count'));
         
     }
 
@@ -65,6 +84,20 @@ class IssueController extends Controller
         foreach ($book_id as $value) {
             $member->books()->attach($value,['issue_date'=>$issue_date,'due_date'=>$due_date,'status'=>$status,'fee'=>$fee]);
             
+             // $bookall =Book::find($book_id);
+            // $books=Book::all();
+            // foreach ($books as $value) {
+            // $book_piv=$value->books;
+                
+            // }
+            //  dd($book_piv);
+           // dd($bookall[0]->noc);
+             // $noc=$bookall[0]->noc;
+             // dd($noc);
+             // $dnoc=$noc-1;
+             // dd($dnoc);
+             // $dnoc->$bookall->$member;
+            
         }
 
         return redirect()->route('issues.index');
@@ -77,7 +110,7 @@ class IssueController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-     function show($id)
+    function show($id)
     {   
         // dd($id);
          // $member = Member::find($id);
@@ -93,11 +126,11 @@ class IssueController extends Controller
      */
     public function edit($id)
     {
-        $books=Book::all();
+        $member=Member::find($id);
         // to retrieve data from subcategory
-        $members=Member::all();
-        $issue =Issue::find($id);
-        return view('backend.issues.edit',compact('books','members','issue'));
+        $book=Book::find($id);
+        // dd($book);
+        return view('backend.issues.edit',compact('member','book'));
 
     }
 
@@ -110,8 +143,28 @@ class IssueController extends Controller
      */
     public function update(Request $request, $id)
     {
+         // dd($request);
+        // $members=Member::all();
+         $b_id=$request->book_id;
+         $due_date=$request->due_date;
+         $issue_date=$request->issue_date;
+         $fee=$request->fee;
+
+         // dd($issue_date);
 
 
+         $member_id=Member::find($id);
+         $book_id=Book::find($b_id);
+         // dd($book_id);
+         $member_id->books()->detach($book_id);
+
+         
+        // $fee=0;
+
+         $member_id->books()->attach($book_id,['issue_date'=>$issue_date,'due_date'=>$due_date,'status'=>1,'fee'=>$fee]);
+       
+        //redirect
+        return redirect()->route('issues.index');
     }
 
     /**
@@ -123,6 +176,6 @@ class IssueController extends Controller
     public function destroy($id)
     
     {
-        
+
     }
 }

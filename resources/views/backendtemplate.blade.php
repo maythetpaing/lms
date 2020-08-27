@@ -68,15 +68,9 @@
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link collapsed" href="{{route('return.index')}}" aria-expanded="true" aria-controls="collapseUtilities">
-          <i class="fas fa-pager"></i>
-          <span>Return List</span>
-        </a>
-      </li>
-      <li class="nav-item">
         <a class="nav-link collapsed" href="{{route('issues.index')}}" aria-expanded="true" aria-controls="collapseUtilities">
           <i class="fas fa-pager"></i>
-          <span>Issues List</span>
+          <span>Issues / Return</span>
         </a>
       </li>
       <li class="nav-item">

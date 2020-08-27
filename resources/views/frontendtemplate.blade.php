@@ -49,7 +49,7 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item active">
-            <a class="nav-link text-white" href="{{route('home')}}">
+            <a class="nav-link text-white" href="{{route('homepage')}}">
               <i class="fas fa-home"></i>
               Home
               <span class="sr-only">(current)</span>

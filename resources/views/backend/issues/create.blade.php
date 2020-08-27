@@ -23,7 +23,12 @@
 					<select name="books[]" class="select form-control @error('book') is-invalid @enderror" id="book" multiple="multiple">
 
 					@foreach($books as $book)
-					<option value="{{$book->id}}">{{$book->name}}</option>
+
+						@if($book_count[""] == 1)
+						<option value="{{$book->id}}">{{$book->name}}</option>
+						@elseif($book_count[$book->id] < $book->noc)
+							<option value="{{$book->id}}">{{$book->name}}</option>
+					@endif
 					{{-- op --}}					
 					@endforeach
 					@error('book')
@@ -46,7 +51,7 @@
 				@enderror
 			</div>
 
-			<input type="submit" value="Issue" class="issue btn btn-outline-primary">
+			<input type="submit" value="Issue" id="issue"class=" btn btn-outline-primary">
 		</form>
 	</div>
 </div>
@@ -56,24 +61,6 @@
 
 $(document).ready(function() {
     $('.select').select2();
-});
-</script>
-<script type="text/javascript">
-$(document).ready(function() {
-    $('.issue').click(function(){
-    	// alert('hi');
-    	var name=$(this).data('name');
-		var photo=$(this).data('photo');
-		var edition=$(this).data('edition');
-		var desc=$(this).data('desc');
-		$('.modal-title').text(name);
-		$('#name').text(name);
-		$('#photo').attr('src',photo);
-		$('#edition').text(edition);
-		$('#desc').text(desc);
-		$('#mymodal').modal('show');
-    	
-    });
 });
 </script>
 @endsection

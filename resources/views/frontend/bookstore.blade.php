@@ -13,7 +13,10 @@
   </span>
 </h2>
 		<div class="row">
+		
 			@foreach($books as $book)
+				@if($book_count[$book->id] < $book->noc)
+				
 			<div class="col-md-4 col-sm-6">
 			<ul class="align">
 				<li>
@@ -73,6 +76,7 @@
 			</ul>
 			
 			</div>
+			@endif
 			@endforeach
 
 		</div>
