@@ -33,7 +33,7 @@
 	</a>
 </div>
 <div class="container-fluid">
-	<h2 class="w-100 mt-1  p-5 pb-5 h-25 bg-light text-dark text-center mb-5">Open from <time>10:00</time> to <time>15:00</time> every weekday</h2>
+	<h2 class="w-100 mt-1  p-5 pb-5 h-25 bg-light text-dark text-center mb-5">Open from <time>10:00</time> to <time>15:00</time> every week day</h2>
 </div>
 {{-- add --}}
 <div class="container">

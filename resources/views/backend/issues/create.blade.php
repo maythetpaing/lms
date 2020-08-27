@@ -50,8 +50,7 @@
 				<div class="alert alert-danger">{{ $message }}</div>
 				@enderror
 			</div>
-
-			<input type="submit" value="Issue" id="issue"class=" btn btn-outline-primary">
+			<input type="submit" value="Issue" class="issue btn btn-outline-primary" onclick="issue()">
 		</form>
 	</div>
 </div>
