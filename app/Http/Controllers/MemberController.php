@@ -58,16 +58,13 @@ class MemberController extends Controller
 
         $member->save();
         //pivot
-        foreach($request as $row){
-            $member->books()->attach($row->id,['qty'=>$row->qty]);//pivot
-        }
-        return "Successfully";
-
-
-        
+        // foreach($request as $row){
+        //     $member->books()->attach($row->id,['qty'=>$row->qty]);//pivot
+        // }
+        // return "Successfully";
 
         // Redirect
-        // return redirect()->route('members.index');
+        return redirect()->route('members.index');
     }
 
     /**

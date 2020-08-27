@@ -12,6 +12,6 @@ class BackendController extends Controller
     }
     public function dashboard($value='')
     {
-    	return view('dashboard');
+    	return view('/dashboard');
 	}
 }

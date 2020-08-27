@@ -20,7 +20,6 @@
 			@foreach($members as $member)
 			<tr>
 				<td>{{$i++}}</td>
-				
 				<td>{{$member->name}}</td>
 				<td>{{$member->email}}</td>
 				<td>{{$member->phone}}</td>

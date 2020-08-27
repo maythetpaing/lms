@@ -17,7 +17,7 @@ class ReturnController extends Controller
     {
         $members=Member::all();
          // dd($members[0]->books[0]->pivot->due_date);
-        return view('backend.issues.index',compact('members'));
+        return view('backend.return.index',compact('members'));
     }
 
     /**
@@ -83,9 +83,6 @@ class ReturnController extends Controller
      */
     public function destroy($id)
     {
-        $issue=Issue::find($id);
-        $issue->delete();
-        //redirect
-        return redirect()->route('issue.index');
+        //
     }
 }

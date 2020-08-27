@@ -43,7 +43,7 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 
-Route::get('login','FrontendController@login')->name('login');
+// Route::post('login','FrontendController@login')->name('login');
 
-Route::get('register','FrontendController@register')->name('register');
+// Route::post('register','FrontendController@register')->name('register');
 
