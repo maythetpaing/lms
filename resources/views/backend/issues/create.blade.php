@@ -46,7 +46,7 @@
 				@enderror
 			</div>
 
-			<input type="submit" value="Issue" class="issue btn btn-outline-primary">
+			<input type="submit" value="Issue" class="issue btn btn-outline-primary" onclick="issue()">
 		</form>
 	</div>
 </div>
@@ -60,20 +60,9 @@ $(document).ready(function() {
 </script>
 <script type="text/javascript">
 $(document).ready(function() {
-    $('.issue').click(function(){
-    	// alert('hi');
-    	var name=$(this).data('name');
-		var photo=$(this).data('photo');
-		var edition=$(this).data('edition');
-		var desc=$(this).data('desc');
-		$('.modal-title').text(name);
-		$('#name').text(name);
-		$('#photo').attr('src',photo);
-		$('#edition').text(edition);
-		$('#desc').text(desc);
-		$('#mymodal').modal('show');
-    	
-    });
-});
+	$('.issue').click(function(){
+		
+	})
+})
 </script>
 @endsection

@@ -1,30 +1,18 @@
 @extends('frontendtemplate')
 @section('content')
 <!DOCTYPE HTML>
-<!--
-	Caminar by TEMPLATED
-	templated.co 
-	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
--->
 <html>
 <head>
-	<title>Caminar by TEMPLATED</title>
+	<title>LMS</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<link rel="stylesheet" href="{{asset('backend/css/main.css')}}" />
 </head>
 <body style="background-image: url({{asset('backend/img/l1.jpg')}});">
 	<div class="container-fluid">
-
-	<!-- Header -->
-	
-
-	<!-- Main -->
 	<section id="main">
 		<div class="inner">
-
-			<!-- One -->
-			<section id="one" class="wrapper style1">
+				<section id="one" class="wrapper style1">
 
 				<div class="image fit flush">
 					<img src="{{asset('backend/img/l5.png')}}" alt="" />
@@ -39,11 +27,9 @@
 				</div>
 			</section>
 
-			<!-- Two -->
-			<section id="two" class="wrapper style2">
+				<section id="two" class="wrapper style2">
 				<header>
 					<h2>Books Gallery</h2>
-					<p></p>
 				</header>
 				<div class="content">
 					<div class="gallery">
@@ -70,13 +56,11 @@
 					</div>
 				</div>
 			</section>
-
-			<!-- Three -->
 			<section id="three" class="wrapper">
 				<div class="spotlight">
 					<div class="image flush"><img src="{{asset('backend/img/li.jpeg')}}" alt="" /></div>
 					<div class="inner">
-						<h3>Common library Construct</h3>
+						<h2>Common library Construct</h2>
 						<p>Most of the libraries that store physical media like books, periodicals, film, and other objects adhere to some derivative of the Dewey Decimal System as their method for tagging, storing, and retrieving materials based on unique identifiers. The use of such systems have caused librarians to develop and leverage common constructs that act as tools for both library professionals and library users alike. These constructs include master catalogs, domain catalogs, indexes, unique identifiers, unique identifier tokens, and artifacts .</p>
 					</div>
 				</div>
@@ -103,14 +87,6 @@
 		</div>
 	</section>
 	</div>
-
-	
-			 <!-- <script src="assets/js/jquery.min.js"></script>
-			// <script src="assets/js/jquery.poptrox.min.js"></script>
-			// <script src="assets/js/skel.min.js"></script>
-			// <script src="assets/js/util.js"></script>
-			// <script src="assets/js/main.js"></script> -->
-
-		</body>
-		</html>
-		@endsection
+	</body>
+	</html>
+	@endsection
